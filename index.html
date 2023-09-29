@@ -24,6 +24,7 @@
     <div class="reveal">
       <div class="slides">
         <section>Why and how to target WebAssembly with Rust?</section>
+        <section>Use case: I want to make a video editor in my browser (find a good example with perf issues)</section>
         <section>
           <h2>What are the Javascript limitations?</h2>
           - JS is bad for fast computations - JS is bad to manipulate binary
@@ -52,6 +53,12 @@
           </ul>
         </section>
         <section>wasm: Demo with rust-crypto lib (TODO)</section>
+        <section>
+          wasm limitations: wasm can't replace JS
+          <p>Web API are only exposed in JS</p>
+        </section>
+        <section>opening: wasm outside the browser? WASI</section>
+        <section>Questions</section>
       </div>
     </div>
 
