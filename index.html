@@ -24,11 +24,17 @@
     <div class="reveal">
       <div class="slides">
         <section>Why and how to target WebAssembly with Rust?</section>
+        <!-- define target -->
         <section>Use case: I want to make a video editor in my browser (find a good example with perf issues)</section>
+        <!-- garbage collector et la pause qui arrive randomly : GC stop the world -> on eput pas faire du calcul en continue comme édition/décodage vidéo-->
+        <!-- wasm jms de pause car pas de GC -->
+        <!-- une VM , un modele abstrait d'ordi. Si on fait un code C avec bug dans mémoire, le code wasm est aussi bugé. En rust on ne peut pas faire de bug mémoire...donc cool--> 
         <section>
           <h2>What are the Javascript limitations?</h2>
           - JS is bad for fast computations - JS is bad to manipulate binary
           data type
+          <!-- Js langage de script comme python... alors que wasm je peux faire tt ce que je fais sur ordi sur le navigateur ! js loin d -->
+          <!-- question réthorique public : ke peut-on pas coder dans browser et pkoi ?--> 
         </section>
         <section>
           JS limitations: How does Node get around? here an example of an npm
