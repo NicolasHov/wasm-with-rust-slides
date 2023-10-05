@@ -25,18 +25,26 @@
       <div class="slides">
         <section>Why and how to target WebAssembly with Rust?</section>
         <!-- define target -->
-        <!-- as a web dev I wanted to understand better and to show you -->
+        <h2>Let's go back to basics</h2>
+        
+          <section>
+             <section>Why and how to target WebAssembly with Rust?
+            </section>
+          <section>
+          <h2>Do you have any idea of what is not possible to code in my browser?</h2>
+          <h3></h3>
+        </section>
         <section>
           <h2>Use case: I want to make a video editor in my browser</h2>
           <h3>I need continuous computations !</h3>
         </section>
-        <!-- garbage collector et la pause qui arrive randomly : GC stop the world -> on eput pas faire du calcul en continue comme édition/décodage vidéo-->
-        <!-- wasm jms de pause car pas de GC -->
-        <!-- une VM , un modele abstrait d'ordi. Si on fait un code C avec bug dans mémoire, le code wasm est aussi bugé. En rust on ne peut pas faire de bug mémoire...donc cool-->
         <section>
-          <h2>What are the Javascript limitations?</h2>
-          - JS is bad for fast computations - JS is bad to manipulate binary
-          data type
+          <h2>Use case: What are the Javascript limitations?</h2>
+          <ul>
+            <li>JS was not designed for continuous computations (garbage collector)</li>
+            <li>JS was not designed to manipulate binary data type (not like low-level language like C,C++, Rust)</li>
+          </ul>
+         
           <!-- Js langage de script comme python... alors que wasm je peux faire tt ce que je fais sur ordi sur le navigateur ! js vs plus ou moins loin de comment fonctionne ordi -->
           <!-- par exemple : gestion de la mémoire, les types de nombres -->
           <!-- question réthorique public : ke peut-on pas coder dans browser et pkoi ?-->
@@ -62,8 +70,11 @@
             <li>Go</li>
             <li>TODO</li>
           </ul>
+           <!-- garbage collector et la pause qui arrive randomly : GC stop the world -> on peut pas faire du calcul en continue comme édition/décodage vidéo-->
+        <!-- wasm jms de pause car pas de GC -->
         </section>
         <section>wasm: Demo with rust-crypto lib (TODO)</section>
+        <!-- une VM , un modele abstrait d'ordi. Si on fait un code C avec bug dans mémoire, le code wasm est aussi bugé. En rust on ne peut pas faire de bug mémoire...donc cool-->
         <section>
           wasm limitations: wasm can't replace JS
           <p>Web API are only exposed in JS</p>
