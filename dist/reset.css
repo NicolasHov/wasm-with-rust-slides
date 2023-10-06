@@ -29,8 +29,14 @@ footer, header, hgroup, main, menu, nav, section {
   display: block;
 }
 
-.gradient {
+.gradient-red {
   background-image: linear-gradient(to right, red, orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-purple {
+  background-image: linear-gradient(to right, white, pink);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
