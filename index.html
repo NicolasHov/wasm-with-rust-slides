@@ -119,7 +119,7 @@
           <p>
             <em
               >"Ok but with NodeJS I can use packages wich contains some C or
-              C++ code"</em
+              C++ code" [with fast and continuous computations]</em
             >
           </p>
           <p><em>"So why not use them?"</em></p>
@@ -147,42 +147,50 @@
           <!-- garbage collector et la pause qui arrive randomly : GC stop the world -> on peut pas faire du calcul en continue comme édition/décodage vidéo-->
           <!-- wasm jms de pause car pas de GC -->
         </section>
+         <section>What is WebaAssembly?
+          here an image of rust, wasm and binary
+        </section>
         <section>
-        <h5>Advantages:</h5>
-        <ul>
-          <li>
-            You can finally outsource performance-intensive tasks like
-            computations for 3D games, virtual, and augmented reality or
-            computer vision to C/C++ or Rust-like performant languages
-          </li>
-          <li>
-            There are tons of amazing legacy libraries written in C/C++ which
-            can now be seamlessly integrated into your web application. You can
-            find some of them here
-          </li>
-          <li>
-            You can write super fast and beautiful applications (Google Earth,
-            Figma, for example)
-            <!-- Google Earth was previously written with C for desktop-->
-          </li>
-        </ul>
-          </section>
+          <h5>Advantages:</h5>
+          <ul>
+            <li>
+              You can finally outsource performance-intensive tasks like
+              computations for 3D games, virtual, and augmented reality or
+              computer vision to C/C++ or Rust-like performant languages
+            </li>
+            <li>
+              There are tons of amazing legacy libraries written in C/C++ which
+              can now be seamlessly integrated into your web application. You
+              can find some of them here
+            </li>
+            <li>
+              You can write super fast and beautiful applications (Google Earth,
+              Figma, for example)
+              <!-- Google Earth was previously written with C for desktop-->
+            </li>
+          </ul>
+        </section>
         <section>
           wasm limitations: wasm can't replace JS
           <p>Web API are only exposed in JS</p>
-          <p>
-            We can see wasm as a way to code app in the frontend, it's a design
-            choice
-          </p>
         </section>
         <section>
           <h2>Why target WebAssembly with Rust?</h2>
         </section>
-          <section>
-          <h2>Rust </h2>
+        <section>
+          the main reason is:
+          <p><quote>
+            
+              Rust's memory safety guarantees make it really rare to have memory
+              leaks
+            </quote>
+          </p>
+          Then the wasm app will keep the same guarantees
+          <!-- une VM , un modele abstrait d'ordi. Si on fait un code C avec bug dans mémoire, le code wasm est aussi bugé. En rust on ne peut pas faire de bug mémoire...donc cool-->
         </section>
-        <section>How to target wasm with Rust: Demo with rust-crypto lib (TODO)</section>
-        <!-- une VM , un modele abstrait d'ordi. Si on fait un code C avec bug dans mémoire, le code wasm est aussi bugé. En rust on ne peut pas faire de bug mémoire...donc cool-->
+        <section>
+          How to target wasm with Rust: Demo with rust-crypto lib (TODO)
+        </section>
         <section>opening: wasm outside the browser? WASI</section>
         <section>Questions</section>
       </div>
