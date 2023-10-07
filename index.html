@@ -35,8 +35,9 @@
               <li>Limitations of the browser: JavaScript</li>
               <li>Can we use NodeJS to solve it?</li>
               <li>What is WebAssembly ?</li>
-              <li>Why do we chose Rust ?</li>
-              <li>Demo: use a rust package in a wasm</li>
+              <li>advantages and inconvenients of WebAssembly</li>
+              <li>Why Rust is a good choice for wasm?</li>
+              <li>Demo: use a rust package in a wasm application</li>
             </ul>
         </section>
         <!-- define target -->
@@ -102,7 +103,7 @@
           <h5>Use case 🎥: <span class="gradient-purple"><em>What are the Javascript limitations?</em></span></h5>
           <br />
           <p><em>"Ok but with NodeJS I can use packages wich contains some C or C++ code"</em></p>
-          <p><em>"So why not use them ?"</em></p>
+          <p><em>"So why not use them?"</em></p>
           <p class="gradient-red">
             spoiler alert: we can't !
           </p>
@@ -110,8 +111,8 @@
           package which use C/C++ language...-->
         </section>
         <section>
-          JS limitations: can this work in the browser ?
-          <h1>No</h1>
+          JS limitations: Can a NodeJS package work in the browser?
+          <h2>No</h2>
           <p>why do you think?</p>
           (here the story of chrome native C++...)
         </section>
@@ -124,10 +125,13 @@
             <li>Rust</li>
             <li>C</li>
             <li>Go</li>
-            <li>TODO</li>
+            <li>...</li>
           </ul>
           <!-- garbage collector et la pause qui arrive randomly : GC stop the world -> on peut pas faire du calcul en continue comme édition/décodage vidéo-->
           <!-- wasm jms de pause car pas de GC -->
+        </section>
+          
+        <section>
         </section>
         <section>
           <h2>Why and how to target WebAssembly with Rust?</h2>
