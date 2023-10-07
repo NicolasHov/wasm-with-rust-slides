@@ -30,15 +30,16 @@
             >
           </h3>
         </section>
-         <section>
+        <section>
+          Sommary:
           <ul>
-              <li>Limitations of the browser: JavaScript</li>
-              <li>Can we use NodeJS to solve it?</li>
-              <li>What is WebAssembly ?</li>
-              <li>advantages and inconvenients of WebAssembly</li>
-              <li>Why Rust is a good choice for wasm?</li>
-              <li>Demo: use a rust package in a wasm application</li>
-            </ul>
+            <li>Limitations of the browser: JavaScript</li>
+            <li>Can we use NodeJS to solve it?</li>
+            <li>What is WebAssembly ?</li>
+            <li>Advantages and inconvenients of WebAssembly</li>
+            <li>Why Rust is a good choice for wasm?</li>
+            <li>Demo: use a rust package in a wasm application</li>
+          </ul>
         </section>
         <!-- define target -->
         <!--section>
@@ -74,7 +75,10 @@
         </section>
         <section>
           <h5>
-            Use case 🎥: <span class="gradient-purple"><em>"I want to make a video editor in my browser"</em></span>
+            Use case 🎥:
+            <span class="gradient-purple"
+              ><em>"I want to make a video editor in my browser"</em></span
+            >
           </h5>
           <br />
           <img
@@ -82,7 +86,12 @@
           />
         </section>
         <section>
-          <h5>Use case 🎥: <span class="gradient-purple"><em>What are the Javascript limitations?</em></span></h5>
+          <h5>
+            Use case 🎥:
+            <span class="gradient-purple"
+              ><em>What are the Javascript limitations?</em></span
+            >
+          </h5>
           <br />
           <ul>
             <li>
@@ -90,8 +99,8 @@
               collector)
             </li>
             <li>
-              JS was not designed to manipulate binary data type (not like
-              more low-level languages like C,C++, Rust)
+              JS was not designed to manipulate binary data type (not like more
+              low-level languages like C,C++, Rust)
             </li>
           </ul>
 
@@ -100,13 +109,21 @@
           <!-- question réthorique public : ke peut-on pas coder dans browser et pkoi ?-->
         </section>
         <section>
-          <h5>Use case 🎥: <span class="gradient-purple"><em>What are the Javascript limitations?</em></span></h5>
+          <h5>
+            Use case 🎥:
+            <span class="gradient-purple"
+              ><em>What are the Javascript limitations?</em></span
+            >
+          </h5>
           <br />
-          <p><em>"Ok but with NodeJS I can use packages wich contains some C or C++ code"</em></p>
-          <p><em>"So why not use them?"</em></p>
-          <p class="gradient-red">
-            spoiler alert: we can't !
+          <p>
+            <em
+              >"Ok but with NodeJS I can use packages wich contains some C or
+              C++ code"</em
+            >
           </p>
+          <p><em>"So why not use them?"</em></p>
+          <p class="gradient-red">spoiler alert: we can't !</p>
           <!-- JS limitations: How does Node get around? here an example of an npm
           package which use C/C++ language...-->
         </section>
@@ -130,14 +147,26 @@
           <!-- garbage collector et la pause qui arrive randomly : GC stop the world -> on peut pas faire du calcul en continue comme édition/décodage vidéo-->
           <!-- wasm jms de pause car pas de GC -->
         </section>
-          
         <section>
-        </section>
-        <section>
-          <h2>Why and how to target WebAssembly with Rust?</h2>
-        </section>
-        <section>wasm: Demo with rust-crypto lib (TODO)</section>
-        <!-- une VM , un modele abstrait d'ordi. Si on fait un code C avec bug dans mémoire, le code wasm est aussi bugé. En rust on ne peut pas faire de bug mémoire...donc cool-->
+        <h5>Advantages:</h5>
+        <ul>
+          <li>
+            You can finally outsource performance-intensive tasks like
+            computations for 3D games, virtual, and augmented reality or
+            computer vision to C/C++ or Rust-like performant languages
+          </li>
+          <li>
+            There are tons of amazing legacy libraries written in C/C++ which
+            can now be seamlessly integrated into your web application. You can
+            find some of them here
+          </li>
+          <li>
+            You can write super fast and beautiful applications (Google Earth,
+            Figma, for example)
+            <!-- Google Earth was previously written with C for desktop-->
+          </li>
+        </ul>
+          </section>
         <section>
           wasm limitations: wasm can't replace JS
           <p>Web API are only exposed in JS</p>
@@ -146,6 +175,14 @@
             choice
           </p>
         </section>
+        <section>
+          <h2>Why target WebAssembly with Rust?</h2>
+        </section>
+          <section>
+          <h2>Rust </h2>
+        </section>
+        <section>How to target wasm with Rust: Demo with rust-crypto lib (TODO)</section>
+        <!-- une VM , un modele abstrait d'ordi. Si on fait un code C avec bug dans mémoire, le code wasm est aussi bugé. En rust on ne peut pas faire de bug mémoire...donc cool-->
         <section>opening: wasm outside the browser? WASI</section>
         <section>Questions</section>
       </div>
