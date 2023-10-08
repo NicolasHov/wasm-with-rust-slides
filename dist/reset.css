@@ -44,3 +44,11 @@ footer, header, hgroup, main, menu, nav, section {
 .left-text {
   text-align: left;
 }
+
+ul {
+  line-height: 60px;
+}
+
+li {
+  font-size: 30px;
+}
