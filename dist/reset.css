@@ -40,3 +40,7 @@ footer, header, hgroup, main, menu, nav, section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.left-text {
+  text-align: left;
+}
