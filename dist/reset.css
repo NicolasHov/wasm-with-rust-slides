@@ -36,7 +36,7 @@ footer, header, hgroup, main, menu, nav, section {
 }
 
 .gradient-purple {
-  background-image: linear-gradient(to right, white, pink);
+  background-image: linear-gradient(to right, #654FF0, #34E5FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
