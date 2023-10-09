@@ -37,8 +37,10 @@
             <li>Ok, but can we use NodeJS to solve it ?</li>
             <li>Or WebAssembly 🕸️ maybe ?</li>
             <li>Advantages👍🏻 and inconvenients👎🏻 of WebAssembly</li>
-            <li>Why Rust 🦀 may be a good choice to target into WebAssembly ?</li>
-            <li>Ok but how ? Show me then 👀</li>
+            <li>
+              Why Rust 🦀 may be a good choice to target into WebAssembly ?
+            </li>
+            <!--li>Ok but how ? Show me then 👀</li-->
           </ul>
           <p class="left-text">wasm = WebAssembly</p>
         </section>
@@ -47,11 +49,10 @@
             Do you have an idea of what is not possible to code in my browser?
           </h2>
           <aside class="notes">
-            <!-- define target -->
-            Let's go back to basics What is web ? it's all that can run in the
-            browser (for instance: HTML, CSS, JS) ex: Thanks to the V8 motor,
-            Chrome can interpret JS and animate pages, can retrieve data for a
-            web API; etc.
+            - What is web ? it's all that can run in the browser (for instance:
+            HTML, CSS, JS) ex: Thanks to the V8 motor, speedmonkey for firefox
+            they can interpret JS and animate pages, can retrieve data for a web
+            API; etc. what if I want to code a video editor ?
           </aside>
         </section>
         <section>
@@ -113,14 +114,18 @@
             >
           </h5>
           <br />
-          <p>
-            <em
-              >"Ok but with NodeJS I can use packages wich contains some C or
-              C++ code" [with fast and continuous computations]</em
-            >
-          </p>
-          <p><em>"So why not use them?"</em></p>
+          <ul>
+            <li>
+              "Ok but with NodeJS I can use packages wich contains some C, C++
+              or Rust code" [with fast and continuous computations]
+            </li>
+            <li>"So why not use them?""</li>
+          </ul>
+          <br />
           <p class="gradient-red">spoiler alert: we can't !</p>
+          <p class="gradient-red">
+            other spoiler alert: the next talk will target this subject
+          </p>
           <aside class="notes">
             JS limitations: How does Node get around? here an example of an npm
             package which use C/C++ language...
@@ -137,9 +142,7 @@
           data-background-repeat="repeat"
           data-background-size="100px"
         >
-          <h2>
-            What is WebAssembly?
-          </h2>
+          <h2>What is WebAssembly?</h2>
         </section>
         <section>
           <p>Web + Assembly = WebAssembly</p>
@@ -147,10 +150,9 @@
             is not quite an assembly language. It’s not meant for any particular
             machine. It’s for web browsers, and when you’re delivering code to
             be executed in the browser, you don’t know what kinds of machines
-            will your code be running on. 
-            
-            wasm: plus proche de comment fonctionne ordi par exemple : gestion de la mémoire, les types de nombres
-            je peux faire tt ce que je fais sur ordi sur le navigateur ! 
+            will your code be running on. wasm: plus proche de comment
+            fonctionne ordi par exemple : gestion de la mémoire, les types de
+            nombres je peux faire tt ce que je fais sur ordi sur le navigateur !
             <!-- wasm jms de pause car pas de GC -->
           </aside>
         </section>
@@ -160,16 +162,16 @@
           <p>Recall: compilation translate from a language to another</p>
           <p>Python, Rust, C/C++, C#, Go</p>
           <aside class="notes">
-            languag Js est un langage de script comme python... alors que wasm
+            Js est un langage de script comme python... alors que wasm
             <!-- wasm jms de pause car pas de GC -->
           </aside>
         </section>
         <section>
           <quote>
-            WebAssembly (abbreviated Wasm) is a binary instruction format for a
+            "WebAssembly (abbreviated Wasm) is a binary instruction format for a
             stack-based virtual machine. Wasm is designed as a portable
             compilation target for programming languages, enabling deployment on
-            the web for client and server applications.
+            the web for client and server applications.""
           </quote>
         </section>
         <section>
@@ -187,8 +189,9 @@
               computer vision to C/C++ or Rust-like performant languages.
             </li>
             <li>
-              There are tons of amazing legacy libraries written in C/C++ which
-              can now be seamlessly integrated into your web application.
+              There are tons of amazing legacy libraries written in your
+              language (C, C++, Rust, etc.) which can now be seamlessly
+              integrated into your web application.
             </li>
             <li>
               bring large applications to the web, without sacrificing
