@@ -25,14 +25,13 @@
       <div class="slides">
         <section>
           <h3>
-            Why and how to target<span class="gradient-red">
-              WebAssembly with Rust?</span
-            >
+            Why target<span class="gradient-purple">
+            WebAssembly</span> with <span class="gradient-red">Rust</span>
           </h3>
         </section>
         <section>
           Table of contents:
-          <ul>
+          <!--ul>
             <li>No, the browser can not do everything...</li>
             <li>Ok, but can we use NodeJS to solve it ?</li>
             <li>Or WebAssembly 🕸️ maybe ?</li>
@@ -40,21 +39,19 @@
             <li>
               Why Rust 🦀 may be a good choice to target into WebAssembly ?
             </li>
-            <!--li>Ok but how ? Show me then 👀</li-->
-          </ul>
-          <p class="left-text">wasm = WebAssembly</p>
+            <!--li>Ok but how ? Show me then 👀</li>
+          </ul-->
+          <details class="left-text">wasm = WebAssembly</details>
         </section>
-        <section>
-         
+        <section>      
             Do you have an idea of what is NOT possible to code in the browser ?
-      
           <aside class="notes">
             - What is web ? it's all that can run in the browser (for instance:
             HTML, CSS, JS) 
             - ex: V8 motor chromium, speedmonkey for firefox
             - they can interpret JS and animate pages, can retrieve data for a web
             API; etc. 
-            - what if I want to code a video editor ?
+            - what if I want to code a video editor directly in my browser ?
           </aside>
         </section>
         <section>
