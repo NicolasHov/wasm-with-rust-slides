@@ -37,7 +37,9 @@
             <li>Ok, but can we use NodeJS to solve it ?</li>
             <li>Or WebAssembly 🕸️? Oh well...why not ?</li>
             <li>Advantages👍🏻 and inconvenients👎🏻 of WebAssembly</li>
-            <li>Why Rust 🦀 may be a good choice to target into WebAssembly ?</li>
+            <li>
+              Why Rust 🦀 may be a good choice to target into WebAssembly ?
+            </li>
             <li>Ok but how ? Show me then 👀</li>
           </ul>
           <p class="left-text">wasm = WebAssembly</p>
@@ -47,12 +49,11 @@
             Do you have an idea of what is not possible to code in my browser?
           </h2>
           <aside class="notes">
-           <!-- define target -->
-            Let's go back to basics
-            What is web ? it's all that can run in the browser (for instance:
-            HTML, CSS, JS)
-            ex: Thanks to the V8 motor, Chrome can interpret
-            JS and animate pages, can retrieve data for a web API; etc.
+            <!-- define target -->
+            Let's go back to basics What is web ? it's all that can run in the
+            browser (for instance: HTML, CSS, JS) ex: Thanks to the V8 motor,
+            Chrome can interpret JS and animate pages, can retrieve data for a
+            web API; etc.
           </aside>
         </section>
         <section>
@@ -91,18 +92,18 @@
           </h5>
           <br />
           <ul>
-            <li>
-              JS was not designed for continuous computations
-            </li>
+            <li>JS was not designed for continuous computations</li>
             <li>
               JS was not designed to manipulate binary data type (not like more
               low-level languages like C,C++, Rust)
             </li>
             <aside class="notes">
-            ##############################""
-            in a word, more high level languages have what we call a garbage collector to manage memory, 
-            In the case of JS, the GC pauses the runtime randdomly, that's why its not designed for continuous computation
-            garbage collector et la pause qui arrive randomly : GC stop the world -> on peut pas faire du calcul en continue comme édition/décodage vidéo-->
+              ##############################"" in a word, more high level
+              languages have what we call a garbage collector to manage memory,
+              In the case of JS, the GC pauses the runtime randdomly, that's why
+              its not designed for continuous computation garbage collector et
+              la pause qui arrive randomly : GC stop the world -> on peut pas
+              faire du calcul en continue comme édition/décodage vidéo-->
             </aside>
           </ul>
         </section>
@@ -138,35 +139,32 @@
           data-background-repeat="repeat"
           data-background-size="100px"
         >
-          What is WebAssembly?
+          <h2>
+            What is WebAssembly?
+          </h2>
         </section>
-         <section>
+        <section>
           <p>Web + Assembly = WebAssembly</p>
-          <p>But a lot of languages compile to wasm</p>
-          <p>Recall: compilation translate from a language to another</p>
-          <p>Python, Rust, C/C++, C#, Go</p>
-           <aside class="notes">
-              is not quite an assembly language. It’s not meant for any particular machine. It’s for web browsers, and when you’re delivering code to be executed in the browser, you don’t know what kinds of machines will your code be running on.
-WASM is a new binary-based programming languag
-            Js est un langage de script comme python... alors que wasm je peux faire tt ce que je fais sur ordi sur le navigateur !
-            js vs wasm: plus ou moins loin de comment fonctionne ordi
-            par exemple : gestion de la mémoire, les types de nombres
-          <!-- wasm jms de pause car pas de GC -->
-           </aside>
+          <aside class="notes">
+            is not quite an assembly language. It’s not meant for any particular
+            machine. It’s for web browsers, and when you’re delivering code to
+            be executed in the browser, you don’t know what kinds of machines
+            will your code be running on. 
+            
+            wasm: plus proche de comment fonctionne ordi par exemple : gestion de la mémoire, les types de nombres
+            je peux faire tt ce que je fais sur ordi sur le navigateur ! 
+            <!-- wasm jms de pause car pas de GC -->
+          </aside>
         </section>
         <section>
           wasm: WebAssembly is not a language for humans
           <p>But a lot of languages compile to wasm</p>
           <p>Recall: compilation translate from a language to another</p>
           <p>Python, Rust, C/C++, C#, Go</p>
-           <aside class="notes">
-              is not quite an assembly language. It’s not meant for any particular machine. It’s for web browsers, and when you’re delivering code to be executed in the browser, you don’t know what kinds of machines will your code be running on.
-WASM is a new binary-based programming languag
-            Js est un langage de script comme python... alors que wasm je peux faire tt ce que je fais sur ordi sur le navigateur !
-            js vs wasm: plus ou moins loin de comment fonctionne ordi
-            par exemple : gestion de la mémoire, les types de nombres
-          <!-- wasm jms de pause car pas de GC -->
-           </aside>
+          <aside class="notes">
+            languag Js est un langage de script comme python... alors que wasm
+            <!-- wasm jms de pause car pas de GC -->
+          </aside>
         </section>
         <section>
           <quote>
@@ -205,7 +203,6 @@ WASM is a new binary-based programming languag
               design choice.
             </p>
           </ul>
-            </aside>
         </section>
         <section>
           wasm limitations: wasm can't replace JS
@@ -234,9 +231,12 @@ WASM is a new binary-based programming languag
           How to target wasm with Rust: Demo with rust-crypto lib (TODO)
         </section>
         <section>opening: wasm outside the browser? WASI</section>
-        <section data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
-  <h2>Questions 🐟</h2>
-</section>
+        <section
+          data-background="white"
+          data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)"
+        >
+          <h2>Questions🐟</h2>
+        </section>
         <section data-markdown>
           ## Thank you for your attention ! To continue the discussion
           [https://hachyderm.io/@Nicolas_ho](https://hachyderm.io/@Nicolas_ho)
