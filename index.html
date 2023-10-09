@@ -25,13 +25,13 @@
       <div class="slides">
         <section>
           <h4>
-            Why target<span class="gradient-purple">
-            WebAssembly</span> with <span class="gradient-red">Rust</span> ?
+            Why target<span class="gradient-purple"> WebAssembly</span> with
+            <span class="gradient-red">Rust</span> ?
           </h4>
         </section>
         <section>
           Table of contents:
-          <br><br>
+          <br /><br />
           <ul>
             <li>No, the browser can not do everything...</li>
             <li>Ok, but can we use NodeJS to solve it ?</li>
@@ -40,19 +40,23 @@
             <li>
               Why Rust 🦀 may be a good choice to target into WebAssembly ?
             </li>
-            <!--li>Ok but how ? Show me then 👀</li>
           </ul>
+          <!--li>Ok but how ? Show me then 👀</li>
+          
           <!--details class="left-text">wasm = WebAssembly</details-->
         </section>
-        <section>      
+        <section>
+          <h2 class="r-fit-text">FIT TEXT</h2>
+          <h2 class="r-fit-text">
             Do you have an idea of what is NOT possible to code in the browser ?
+          </h2>
+
           <aside class="notes">
             - What is web ? it's all that can run in the browser (for instance:
-            HTML, CSS, JS) 
-            - ex: V8 motor chromium, speedmonkey for firefox
-            - they can interpret JS and animate pages, can retrieve data for a web
-            API; etc. 
-            - what if I want to code a video editor directly in my browser ?
+            HTML, CSS, JS) - ex: V8 motor chromium, speedmonkey for firefox -
+            they can interpret JS and animate pages, can retrieve data for a web
+            API; etc. - what if I want to code a video editor directly in my
+            browser ?
           </aside>
         </section>
         <section>
@@ -63,12 +67,26 @@
             </ul>
           </article>
           <br />
-          <img
-            src="https://cdn.glitch.global/4a8a22ae-a947-460e-9c6b-bc3367c62bd8/video_editor.png?v=1696855672239"
-          />
-          <img
-            src="https://cdn.glitch.global/4a8a22ae-a947-460e-9c6b-bc3367c62bd8/video_editor.png?v=1696856047380"   
-          />
+          <div class="r-stack">
+            <img
+              class="fragment"
+              src="https://cdn.glitch.global/4a8a22ae-a947-460e-9c6b-bc3367c62bd8/video_editor.png?v=1696855672239"
+              width="450"
+              height="300"
+            />
+            <img
+              class="fragment"
+              src=""
+              width="300"
+              height="450"
+            />
+            <img
+              class="fragment"
+              src="https://cdn.glitch.global/4a8a22ae-a947-460e-9c6b-bc3367c62bd8/unity.jpg?v=1696857003107"
+              width="400"
+              height="400"
+            />
+          </div>
         </section>
         <section>
           <h5>
@@ -126,18 +144,16 @@
           <p class="gradient-red">
             other spoiler alert: the next talk will target this subject
           </p>
-          <aside class="notes">
-            In the next talk...
-          </aside>
+          <aside class="notes">In the next talk...</aside>
         </section>
         <section>
-           <h5>
+          <h5>
             Use case 🎥:
             <span class="gradient-purple"
               ><em>What are the Javascript limitations?</em></span
             >
           </h5>
-          <h2>No, we </h2>
+          <h2>No, we</h2>
           <p>why do you think?</p>
           (here the story of chrome native C++...)
         </section>
@@ -149,7 +165,8 @@
         >
           <h2>WebAssembly</h2>
         </section>
-        <section>+
+        <section>
+          +
           <p>Web + Assembly = WebAssembly</p>
           <aside class="notes">
             is not quite an assembly language. It’s not meant for any particular
@@ -237,22 +254,14 @@
           How to target wasm with Rust: Demo with rust-crypto lib (TODO)
         </section>
         <section>opening: wasm outside the browser? WASI</section>
-        <section
-          data-background="white"
-          data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)"
-        >
+        <section data-background="white">
           <h2>Questions🐟</h2>
         </section>
         <section data-markdown>
-          # END
-          
-          #### Thank you for your attention ! 
-          
-          To continue the discussion [https://hachyderm.io/@Nicolas_ho](https://hachyderm.io/@Nicolas_ho)
+          #### Thank you for your attention ! To continue the discussion
+          [https://hachyderm.io/@Nicolas_ho](https://hachyderm.io/@Nicolas_ho)
         </section>
-         <section data-state="gradient"
-          data-background-gradient="linear-gradient(to bottom, #283b95, white)"
-        >
+        <section data-background="white">
           <h2>Demo!</h2>
         </section>
       </div>
