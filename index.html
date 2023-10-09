@@ -29,36 +29,31 @@
               WebAssembly with Rust?</span
             >
           </h3>
-          <h6>October 2023</h6>
         </section>
         <section>
           Table of contents:
           <ul>
-            <li>The browser can not do everything</li>
-            <li>Can we use NodeJS to solve it?</li>
-            <li>WebAssembly ? Oh well...why not ?</li>
-            <li>Advantages and inconvenients of WebAssembly</li>
-            <li>Why Rust is a good choice for WebAssembly?</li>
-            <li>How ? Demo: compile a rust package into WebAssembly</li>
+            <li>No, the browser can not do everything...</li>
+            <li>Ok, but can we use NodeJS to solve it ?</li>
+            <li>Or WebAssembly 🕸️? Oh well...why not ?</li>
+            <li>Advantages👍🏻 and inconvenients👎🏻 of WebAssembly</li>
+            <li>Why Rust 🦀 may be a good choice to target into WebAssembly ?</li>
+            <li>Ok but how ? Show me then 👀</li>
           </ul>
           <p class="left-text">wasm = WebAssembly</p>
         </section>
-        <!-- define target -->
-        <!--section>
-          <h2>Let's go back to basics</h2>
-          <p>
-            What is web ? it's all that can run in the browser (for instance:
-            HTML, CSS, JS)
-          </p>
-          <p>
-            ex: Thanks to the V8 motor, Chrome can display pages, can interpret
-            JS and animate pages, can retrieve data for a web API; etc.
-          </p>
-        </section-->
         <section>
           <h2>
             Do you have an idea of what is not possible to code in my browser?
           </h2>
+          <aside class="notes">
+           <!-- define target -->
+            Let's go back to basics
+            What is web ? it's all that can run in the browser (for instance:
+            HTML, CSS, JS)
+            ex: Thanks to the V8 motor, Chrome can interpret
+            JS and animate pages, can retrieve data for a web API; etc.
+          </aside>
         </section>
         <section>
           <article>
@@ -97,17 +92,17 @@
           <br />
           <ul>
             <li>
-              JS was not designed for continuous computations (garbage
-              collector)
+              JS was not designed for continuous computations
             </li>
             <li>
               JS was not designed to manipulate binary data type (not like more
               low-level languages like C,C++, Rust)
             </li>
             <aside class="notes">
-             <!-- Js langage de script comme python... alors que wasm je peux faire tt ce que je fais sur ordi sur le navigateur ! js vs wasm: plus ou moins loin de comment fonctionne ordi -->
-          <!-- par exemple : gestion de la mémoire, les types de nombres -->
-          <!-- question réthorique public : ke peut-on pas coder dans browser et pkoi ?-->
+            ##############################""
+            in a word, more high level languages have what we call a garbage collector to manage memory, 
+            In the case of JS, the GC pauses the runtime randdomly, that's why its not designed for continuous computation
+            garbage collector et la pause qui arrive randomly : GC stop the world -> on peut pas faire du calcul en continue comme édition/décodage vidéo-->
             </aside>
           </ul>
         </section>
@@ -151,7 +146,9 @@
           <p>Recall: compilation translate from a language to another</p>
           <p>Python, Rust, C/C++, C#, Go</p>
            <aside class="notes">
-          <!-- garbage collector et la pause qui arrive randomly : GC stop the world -> on peut pas faire du calcul en continue comme édition/décodage vidéo-->
+            Js est un langage de script comme python... alors que wasm je peux faire tt ce que je fais sur ordi sur le navigateur !
+            js vs wasm: plus ou moins loin de comment fonctionne ordi
+            par exemple : gestion de la mémoire, les types de nombres
           <!-- wasm jms de pause car pas de GC -->
            </aside>
         </section>
@@ -221,7 +218,7 @@
           How to target wasm with Rust: Demo with rust-crypto lib (TODO)
         </section>
         <section>opening: wasm outside the browser? WASI</section>
-        <section data-background="#FFFFFF">Questions</section>
+        <section data-background="grey">Questions</section>
         <section data-markdown>
           ## Thank you for your attention ! To continue the discussion
           [https://hachyderm.io/@Nicolas_ho](https://hachyderm.io/@Nicolas_ho)

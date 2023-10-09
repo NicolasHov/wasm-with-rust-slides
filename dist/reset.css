@@ -45,6 +45,10 @@ footer, header, hgroup, main, menu, nav, section {
   text-align: left;
 }
 
+.empty_space {
+  height: 280px;
+}
+
 ul {
   line-height: 60px;
 }
