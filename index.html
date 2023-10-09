@@ -140,12 +140,28 @@
         >
           What is WebAssembly?
         </section>
+         <section>
+          <p>Web + Assembly = WebAssembly</p>
+          <p>But a lot of languages compile to wasm</p>
+          <p>Recall: compilation translate from a language to another</p>
+          <p>Python, Rust, C/C++, C#, Go</p>
+           <aside class="notes">
+              is not quite an assembly language. It’s not meant for any particular machine. It’s for web browsers, and when you’re delivering code to be executed in the browser, you don’t know what kinds of machines will your code be running on.
+WASM is a new binary-based programming languag
+            Js est un langage de script comme python... alors que wasm je peux faire tt ce que je fais sur ordi sur le navigateur !
+            js vs wasm: plus ou moins loin de comment fonctionne ordi
+            par exemple : gestion de la mémoire, les types de nombres
+          <!-- wasm jms de pause car pas de GC -->
+           </aside>
+        </section>
         <section>
           wasm: WebAssembly is not a language for humans
           <p>But a lot of languages compile to wasm</p>
           <p>Recall: compilation translate from a language to another</p>
           <p>Python, Rust, C/C++, C#, Go</p>
            <aside class="notes">
+              is not quite an assembly language. It’s not meant for any particular machine. It’s for web browsers, and when you’re delivering code to be executed in the browser, you don’t know what kinds of machines will your code be running on.
+WASM is a new binary-based programming languag
             Js est un langage de script comme python... alors que wasm je peux faire tt ce que je fais sur ordi sur le navigateur !
             js vs wasm: plus ou moins loin de comment fonctionne ordi
             par exemple : gestion de la mémoire, les types de nombres
@@ -218,7 +234,9 @@
           How to target wasm with Rust: Demo with rust-crypto lib (TODO)
         </section>
         <section>opening: wasm outside the browser? WASI</section>
-        <section data-background="grey">Questions</section>
+        <section data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
+  <h2>Questions 🐟</h2>
+</section>
         <section data-markdown>
           ## Thank you for your attention ! To continue the discussion
           [https://hachyderm.io/@Nicolas_ho](https://hachyderm.io/@Nicolas_ho)
