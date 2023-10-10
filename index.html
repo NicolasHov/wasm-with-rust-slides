@@ -24,12 +24,12 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <br>
+          <br />
           <div class="wrapper-light">
             Why target<span class="gradient-purple"> WebAssembly</span> with
             <span class="gradient-red">Rust</span> ?
           </div>
-          <br>
+          <br />
           <div>
             <p class="fragment">
               Take a deep breath and be ready to dive into
@@ -53,7 +53,9 @@
               Or <span class="gradient-purple">WebAssembly</span> 🕸️ ? But what
               that is ?
             </li>
-            <li class="fragment">Advantages👍🏻 and specificities⚠️ of WebAssembly</li>
+            <li class="fragment">
+              Advantages👍🏻 and specificities⚠️ of WebAssembly
+            </li>
             <li class="fragment">
               Why <span class="gradient-red">Rust</span> 🦀 may be a good choice
               to target into WebAssembly ?
@@ -114,7 +116,7 @@
 
           <br />
           <ul style="list-style: none">
-            <li>JS was not designed for realtime computations</li>
+            <li class="fragment">JS was not designed for realtime computations</li>
             <li>
               JS was not designed to manipulate binary data type (not like more
               low-level languages like C,C++, Rust)
@@ -145,7 +147,14 @@
           <p class="gradient-red fragment">
             spoiler alert: we can't use those packages !
           </p>
-          <aside class="notes"></aside>
+          <aside class="notes">
+            ###########################################################TODO 
+            - (On peut tricher avec le driver de la carte son) 
+            - Qd on manipule Binary
+            data type (image, son, pas du texte) on est obligé d'utiliser l'API
+            du browser (api webGL pour le 3d, api audio ,etc qui sont codées en
+            C,C++, Rust)
+          </aside>
         </section>
         <section>
           <h5>
@@ -154,6 +163,8 @@
             >
           </h5>
           <p>Let's talk about JS...</p>
+          historique : aujourd'hui on voudrait que le navigateur sache tout faire (pas la première fois qu'on fait autre chose que je ds nav car flash, java web applet, Google native client
+
           (here the story of chrome native C++...)
         </section>
         <section>Is there a solution to save us ??? 😱</section>
@@ -217,16 +228,16 @@
             so.&rdquo;
           </blockquote>
           <div style="display: flex; justify-content: center">
-            <p class="fragment" style="margin-left: 40px">Flexibility</p>
-            <p class="fragment" style="margin-left: 40px">Portability</p>
-            <p class="fragment" style="margin-left: 40px">Performance</p>
+            <p class="fragment" style="margin-left: 40px">🖇️Flexibility</p>
+            <p class="fragment" style="margin-left: 40px">💼Portability</p>
+            <p class="fragment" style="margin-left: 40px">🚀Performance</p>
           </div>
           <aside class="notes">
             Native performance with the ease of web distribution
           </aside>
         </section>
         <section>
-          <h5>Flexibility:</h5>
+          <h5>🖇️Flexibility:</h5>
           <p class="fragment">
             <em>use multiple languages in the browser </em>
           </p>
@@ -262,7 +273,7 @@
           </aside>
         </section>
         <section>
-          <h5>Flexibility:</h5>
+          <h5>🖇️Flexibility:</h5>
           <ul style="list-style: none">
             <li>
               Bring large applications or game engines to the web, without
@@ -280,7 +291,7 @@
         </section>
 
         <section>
-          <h5>Performance:</h5>
+          <h5>🚀Performance:</h5>
           <br />
           <ul style="list-style: none">
             <li>
@@ -297,7 +308,7 @@
         </section>
 
         <section>
-          <h5>Portability:</h5>
+          <h5>💼Portability:</h5>
           <p>Run on all browsers.</p>
           <ul style="list-style: none">
             <li>
