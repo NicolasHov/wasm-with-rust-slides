@@ -24,10 +24,12 @@
     <div class="reveal">
       <div class="slides">
         <section>
+          <br>
           <div class="wrapper-light">
             Why target<span class="gradient-purple"> WebAssembly</span> with
             <span class="gradient-red">Rust</span> ?
           </div>
+          <br>
           <div>
             <p class="fragment">
               Take a deep breath and be ready to dive into
@@ -36,7 +38,6 @@
             </p>
             <p class="fragment">🫧</p>
             <p class="fragment">🫧</p>
-            <p class="fragment">But why is it big ?</p>
           </div>
         </section>
         <section>
@@ -52,7 +53,7 @@
               Or <span class="gradient-purple">WebAssembly</span> 🕸️ ? But what
               that is ?
             </li>
-            <li class="fragment">Advantages👍🏻 and limits👎🏻 of WebAssembly</li>
+            <li class="fragment">Advantages👍🏻 and specificities⚠️ of WebAssembly</li>
             <li class="fragment">
               Why <span class="gradient-red">Rust</span> 🦀 may be a good choice
               to target into WebAssembly ?
@@ -137,11 +138,13 @@
               - "Ok but with NodeJS I can use packages wich contains some C, C++
               or Rust code" [with fast and realtime computations]
             </li>
-            
+            <br />
             <li class="fragment">- "So why not use them?"</li>
           </ul>
           <br />
-          <p class="gradient-red fragment">spoiler alert: we can't use those packages !</p>
+          <p class="gradient-red fragment">
+            spoiler alert: we can't use those packages !
+          </p>
           <aside class="notes"></aside>
         </section>
         <section>
@@ -311,10 +314,8 @@
           </aside>
         </section>
         <section>
-          <h5>Limitations:</h5>
+          <h5>Wasm won't replace JS:</h5>
           <ul style="list-style: none">
-            <li>Don't get it wrong, Wasm won't replace JS:</li>
-            <br />
             <li class="fragment">
               >>JS acts like glue code between the browser and Wasm
             </li>
@@ -327,7 +328,27 @@
             browser (via webAPI) and from the other to wasm
           </aside>
         </section>
-
+        <section>
+          <h5>Wasm won't disappear tomorrow:</h5>
+          <ul style="list-style: none">
+            <li class="fragment">
+              >>It's a standard from the web consortium since 2017
+            </li>
+            <br />
+            <li class="fragment">
+              >>It can also be executed outside of the browser environment
+              (WASI)
+            </li>
+          </ul>
+          <aside class="notes">
+            - the WebAssembly System Interface (WASI) provides a standardized
+            way for Wasm modules to interact with the host system - WASI allows
+            Wasm modules can discuss with the system like file I/O, network
+            access, and interacting with system resources. - dev can code
+            cross-platform application : directly for the browser and for the
+            system outside the browser
+          </aside>
+        </section>
         <!--#####      Rust    #####-->
         <section>
           <h5>
