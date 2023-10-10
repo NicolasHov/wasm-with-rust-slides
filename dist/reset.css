@@ -41,6 +41,10 @@ footer, header, hgroup, main, menu, nav, section {
   -webkit-text-fill-color: transparent;
 }
 
+.yellow {
+  color: #efd81c;
+}
+
 .left-text {
   text-align: left;
 }

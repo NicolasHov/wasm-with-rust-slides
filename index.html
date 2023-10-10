@@ -33,21 +33,24 @@
           Table of contents:
           <br /><br />
           <ul>
-            <li>No, the browser can not do everything...</li>
-            <li>Ok, but can we use NodeJS to solve it ?</li>
-            <li>Or <span class="gradient-purple">WebAssembly</span> 🕸️ maybe ?</li>
-            <li>Advantages👍🏻 and inconvenients👎🏻 of WebAssembly</li>
-            <li>
+            <li class="fragment">No, the browser (<span class="yellow">JavaScript</span>) can not do everything...</li>
+            <li class="fragment">Ok, but can we use NodeJS to solve it ?</li>
+            <li class="fragment">Or <span class="gradient-purple">WebAssembly</span> 🕸️ maybe ?</li>
+            <li class="fragment">Advantages👍🏻 and inconvenients👎🏻 of WebAssembly</li>
+            <li class="fragment">
               Why <span class="gradient-red">Rust</span> 🦀 may be a good choice to target into WebAssembly ?
             </li>
           </ul>
-          <!--li>Ok but how ? Show me then 👀</li>
+          <!--li class="fragment">Ok but how ? Show me then 👀</li-->
           
-          <!--details class="left-text">wasm = WebAssembly</details-->
+          <p class="fragment left-text">wasm = WebAssembly</p>
         </section>
         <section>
           <h2 class="r-fit-text">
-            What is NOT possible to code in the browser ?
+            What <span class="yellow">IS NOT</span> possible to code in the browser using <span class="yellow">JavaScript</span> ?
+          </h2>
+            <h2 class="r-fit-text">
+           What <span class="yellow">IS</span> possible to code outside the browser using <span class="yellow">JavaScript</span> with NodeJS ?
           </h2>
           <!--h2 class="r-fit-text">Any idea ?</h2-->
           <aside class="notes">
@@ -108,7 +111,7 @@
         </section>
         <section>
            <h2 class="r-fit-text">
-          What are the Javascript limitations?
+          What are the JavaScript limitations?
           </h2 >
         
           <br />
@@ -130,7 +133,7 @@
         </section>
         <section>
           <h5>
-            What are the Javascript limitations?
+            What are the JavaScript limitations?
             >
           </h5>
           <br />
@@ -152,7 +155,7 @@
           <h5>
             Use case 🎥:
             <span class="gradient-purple"
-              ><em>What are the Javascript limitations?</em></span
+              ><em>What are the JavaScript limitations?</em></span
             >
           </h5>
           <h2>No, we</h2>
@@ -250,7 +253,9 @@
             (there's others reasons like community, tooling)
           </p>
           Then the wasm app will keep the same guarantees
-          <!-- une VM , un modele abstrait d'ordi. Si on fait un code C avec bug dans mémoire, le code wasm est aussi bugé. En rust on ne peut pas faire de bug mémoire...donc cool-->
+          <aside class="notes">
+           une VM , un modele abstrait d'ordi. Si on fait un code C avec bug dans mémoire, le code wasm est aussi bugé. En rust on ne peut pas faire de bug mémoire...donc cool :)
+          </aside>
         </section>
         <section>
           How to target wasm with Rust: Demo with rust-crypto lib (TODO)
