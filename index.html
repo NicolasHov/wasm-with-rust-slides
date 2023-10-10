@@ -25,18 +25,18 @@
       <div class="slides">
         <section>
           <div class="wrapper-light">
-              Why target<span class="gradient-purple"> WebAssembly</span> with
-              <span class="gradient-red">Rust</span> ? 
+            Why target<span class="gradient-purple"> WebAssembly</span> with
+            <span class="gradient-red">Rust</span> ?
           </div>
           <div>
-          <p class="fragment">
-            Take a deep breath and be ready to dive into 
-            <span class="gradient-purple">the last big web standard</span> of
-            the W3C...
-          </p>
-          <p class="fragment">🫧</p>
-          <p class="fragment">🫧</p>
-          <p class="fragment">But why is it big ?</p>
+            <p class="fragment">
+              Take a deep breath and be ready to dive into
+              <span class="gradient-purple">the last big web standard</span> of
+              the W3C...
+            </p>
+            <p class="fragment">🫧</p>
+            <p class="fragment">🫧</p>
+            <p class="fragment">But why is it big ?</p>
           </div>
         </section>
         <section>
@@ -117,11 +117,13 @@
               low-level languages like C,C++, Rust)
             </li>
             <aside class="notes">
-              if i try to create an audio editor with JS (without the webAPI, it will have pause/bugs 
-              -in a word, more high level languages have what we call a garbage collector to manage memory,
-              -In the case of JS, the GC pauses the runtime randdomly ' GC stop the world', that's why
-              -its not designed for realtime computation garbage collector et
-              -> on peut pas faire du calcul en continue comme édition/décodage vidéo-->
+              if i try to create an audio editor with JS (without the webAPI, it
+              will have pause/bugs -in a word, more high level languages have
+              what we call a garbage collector to manage memory, -In the case of
+              JS, the GC pauses the runtime randdomly ' GC stop the world',
+              that's why -its not designed for realtime computation garbage
+              collector et -> on peut pas faire du calcul en continue comme
+              édition/décodage vidéo-->
             </aside>
           </ul>
         </section>
@@ -154,13 +156,9 @@
           (here the story of chrome native C++...)
         </section>
         <section>Is there a solution to save us ??? 😱</section>
-        
-        
-        
-        <!--#####    WebAssembly    #####-->
-        
 
-        
+        <!--#####    WebAssembly    #####-->
+
         <section
           data-background="https://cdn.glitch.global/4a8a22ae-a947-460e-9c6b-bc3367c62bd8/webassembly-icon.svg?v=1696780160281"
           data-background-repeat="repeat"
@@ -179,125 +177,122 @@
               src="https://cdn.glitch.global/4a8a22ae-a947-460e-9c6b-bc3367c62bd8/wavacity.png?v=1696858464293"
             />
           </a>
-          <a href="https://wavacity.com" class="fragment"><p class="fragment">Try me</p></a>
+          <a href="https://wavacity.com" class="fragment"
+            ><p class="fragment">Try me</p></a
+          >
         </section>
         <section>
           <p>Web (browser) + Assembly (machine language) = WebAssembly</p>
           <aside class="notes">
-            An assembly language made to be executed on the virtual machine that is the browser. 
-            
-            you don’t know what kinds of machines will your code be running on. wasm: 
-            
-            plus proche de comment fonctionne ordi par exemple : gestion de la mémoire, les types de
-            nombres 
-            
-            je peux faire tt ce que je fais sur ordi sur le navigateur !
+            An assembly language made to be executed on the virtual machine that
+            is the browser. you don’t know what kinds of machines will your code
+            be running on. wasm: plus proche de comment fonctionne ordi par
+            exemple : gestion de la mémoire, les types de nombres je peux faire
+            tt ce que je fais sur ordi sur le navigateur !
           </aside>
         </section>
-         <section>
+        <section>
           Some code worth 1000 words:
           <img
             class="fragment"
             src="https://cdn.glitch.global/4a8a22ae-a947-460e-9c6b-bc3367c62bd8/wat_wasm.png?v=1696935870486"
           />
           <p class="fragment">
-            wat (.wat file) format of wasm code (.wasm file). 
+            wat (.wat file) format of wasm code (.wasm file).
           </p>
-        <aside class="notes">
-          To enable WebAssembly to be read and edited by humans (debugged), there is a textual representation of the Wasm binary format.
+          <aside class="notes">
+            To enable WebAssembly to be read and edited by humans (debugged),
+            there is a textual representation of the Wasm binary format.
           </aside>
         </section>
         <section>
-          <h4>
-            From MDN's official documentation:
-          </h4>
-          <blockquote cite="https://developer.mozilla.org/en-US/docs/WebAssembly">
-            &ldquo;<span class="gradient-purple">WebAssembly</span> has huge implications for the web platform — 
-            it provides a way to run code written in <strong>multiple languages</strong> on
-            the web at <strong>near native speed</strong>, with client apps running on the
+          <h4>From MDN's official documentation:</h4>
+          <blockquote
+            cite="https://developer.mozilla.org/en-US/docs/WebAssembly"
+          >
+            &ldquo;<span class="gradient-purple">WebAssembly</span> has huge
+            implications for the web platform — it provides a way to run code
+            written in <strong>multiple languages</strong> on the web at
+            <strong>near native speed</strong>, with client apps running on the
             web that previously couldn't have done so.&rdquo;
-					</blockquote>
+          </blockquote>
           <aside class="notes">
-            Native performance with the ease of web distribution
-            ex: Figma, google earth, ebay ma refait aussi pour tester
+            Native performance with the ease of web distribution ex: Figma,
+            google earth, ebay ma refait aussi pour tester
           </aside>
         </section>
         <section>
           <h4>The languages that compile to wasm</h4>
           <p>Recall: to compile is to translate from a language to another</p>
-					<table>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>Rust</td>
-								<td>C</td>
-								<td>C++</td>
-							</tr>
-						
-							<tr>
-								<td>Go</td>
-								<td>AssemblyScript</td>
-								<td>C#</td>
-							</tr>
-							<tr>
-								<td>F#</td>
-								<td>Cobol</td>
-								<td>Zig, D...</td>
-							</tr>
-						</tbody>
-					</table>
-           <aside class="notes">
-           Some others languages try to create their own compilers to wasm but they are not yet stable
+          <table>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Rust</td>
+              <td>C</td>
+              <td>C++</td>
+            </tr>
+
+            <tr>
+              <td>Go</td>
+              <td>AssemblyScript</td>
+              <td>C#</td>
+            </tr>
+            <tr>
+              <td>F#</td>
+              <td>Cobol</td>
+              <td>Zig, D...</td>
+            </tr>
+          </table>
+          <aside class="notes">
+            Some others languages try to create their own compilers to wasm but
+            they are not yet stable
           </aside>
         </section>
-       
+
         <section>
-          <h5>Advantages:</h5>
+          <h5>Performance:</h5>
           <p>
-              - computations:
-              You can finally outsource performance-intensive tasks like
-              computations for 3D games, virtual, and augmented reality or
-              computer vision to C/C++ or Rust-like performant languages.
+            you can do performance-intensive tasks like computations for 3D
+            games, virtual, and augmented reality or computer vision to C/C++ or
+            Rust-like performant languages.
           </p>
         </section>
-      <section>
-          <h5>Advantages:</h5>
+        <section>
+          <h5>Flexibility:</h5>
           <p>
-            
-             - use libraries written in your language
-              There are tons of amazing legacy libraries written in your
-              language which can now be seamlessly
-              integrated into your web application.
-           
-              It brings large applications to the web, without sacrificing
-              performance or having to re-write the entire application from
-              scratch (Google Earth, Figma, for example).
-              <!-- Google Earth was previously written with C for desktop-->
+            - use libraries written in your language. There are tons of amazing
+            legacy libraries written in your language which can now be
+            seamlessly integrated into your web application. It brings large
+            applications to the web, without sacrificing performance or having
+            to re-write the entire application from scratch (Google Earth,
+            Figma, for example).
           </p>
-            <p>
-              We can see wasm as a way to code app in the Front-End, it's a
-              design choice.
-            </p>
+          <p>
+            We can see wasm as a way to code app in the Front-End, it's a design
+            choice.
+          </p>
         </section>
         <section>
-          Limitations: 
+        <h5>portability:</h5>
+        <p>Run on all browsers.</p>
+        <p>
+          We can see wasm as a way to code app in the Front-End, it's a design
+          choice.
+        </p>
+        <section>
+          Limitations:
           <ul>
-            <li>
-            Wasm can't replace JS
-          </li>
-          <li>Web API are only exposed in JS</li>
+            <li>Wasm can't replace JS</li>
+            <li>Web API are only exposed in JS</li>
           </ul>
         </section>
-      
-           
-        
-        <!--#####      Rust    #####-->
-        
 
-      
+        <!--#####      Rust    #####-->
+
         <section
           data-background-color="rgb(70, 70, 255)"
           data-background="https://cdn.glitch.global/4a8a22ae-a947-460e-9c6b-bc3367c62bd8/rust-lang-icon.svg?v=1696780169301"
@@ -305,8 +300,8 @@
           data-background-size="200px"
         >
           <div class="wrapper-dark">
-             Why target<span class="gradient-purple"> WebAssembly</span> with
-              <span class="gradient-red">Rust</span> ?
+            Why target<span class="gradient-purple"> WebAssembly</span> with
+            <span class="gradient-red">Rust</span> ?
           </div>
         </section>
         <section>
