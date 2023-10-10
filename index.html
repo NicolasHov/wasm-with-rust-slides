@@ -243,11 +243,15 @@
         <section>
           Some code worth 1000 words:
           <img
+            class="fragment"
             src="https://cdn.glitch.global/4a8a22ae-a947-460e-9c6b-bc3367c62bd8/wat_wasm.png?v=1696935870486"
           />
-          <p>
-            S-expression (wat) format of wasm code. (Only for debugging purpose) 
+          <p class="fragment">
+            wat (.wat file) format of wasm code (.wasm file). 
           </p>
+        <aside class="notes">
+          To enable WebAssembly to be read and edited by humans (debugged), there is a textual representation of the Wasm binary format.
+          </aside>
         </section>
         <section>
           <h5>Advantages:</h5>
@@ -291,7 +295,7 @@
           data-background-repeat="repeat"
           data-background-size="200px"
         >
-          <div class="wrapper-light">
+          <div class="wrapper-dark">
              Why target<span class="gradient-purple"> WebAssembly</span> with
               <span class="gradient-red">Rust</span> ?
           </div>
