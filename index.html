@@ -111,7 +111,7 @@
 
           <br />
           <ul>
-            <li>JS was not designed for continuous computations</li>
+            <li>JS was not designed for realtime computations</li>
             <li>
               JS was not designed to manipulate binary data type (not like more
               low-level languages like C,C++, Rust)
@@ -120,7 +120,7 @@
               if i try to create an audio editor with JS (without the webAPI, it will have pause/bugs 
               -in a word, more high level languages have what we call a garbage collector to manage memory,
               -In the case of JS, the GC pauses the runtime randdomly ' GC stop the world', that's why
-              -its not designed for continuous computation garbage collector et
+              -its not designed for realtime computation garbage collector et
               -> on peut pas faire du calcul en continue comme édition/décodage vidéo-->
             </aside>
           </ul>
@@ -179,18 +179,32 @@
               src="https://cdn.glitch.global/4a8a22ae-a947-460e-9c6b-bc3367c62bd8/wavacity.png?v=1696858464293"
             />
           </a>
-          <p class="fragment">Click me</p>
+          <a href="https://wavacity.com" class="fragment"><p class="fragment">Try me</p></a>
         </section>
         <section>
           <p>Web + Assembly = WebAssembly</p>
           <aside class="notes">
-            is not quite an assembly language. It’s not meant for any particular
-            machine. It’s for web browsers, and when you’re delivering code to
-            be executed in the browser, you don’t know what kinds of machines
-            will your code be running on. wasm: plus proche de comment
-            fonctionne ordi par exemple : gestion de la mémoire, les types de
-            nombres je peux faire tt ce que je fais sur ordi sur le navigateur !
-            <!-- wasm jms de pause car pas de GC -->
+            An assembly language made to be executed on the virtual machine that is the browser. 
+            
+            you don’t know what kinds of machines will your code be running on. wasm: 
+            
+            plus proche de comment fonctionne ordi par exemple : gestion de la mémoire, les types de
+            nombres 
+            
+            je peux faire tt ce que je fais sur ordi sur le navigateur !
+          </aside>
+        </section>
+         <section>
+          Some code worth 1000 words:
+          <img
+            class="fragment"
+            src="https://cdn.glitch.global/4a8a22ae-a947-460e-9c6b-bc3367c62bd8/wat_wasm.png?v=1696935870486"
+          />
+          <p class="fragment">
+            wat (.wat file) format of wasm code (.wasm file). 
+          </p>
+        <aside class="notes">
+          To enable WebAssembly to be read and edited by humans (debugged), there is a textual representation of the Wasm binary format.
           </aside>
         </section>
         <section>
@@ -198,18 +212,17 @@
             From MDN's official documentation:
           </h4>
           <blockquote cite="https://developer.mozilla.org/en-US/docs/WebAssembly">
-						&ldquo;WebAssembly has huge implications for the web platform — 
-            it provides a way to run code written in multiple languages on
-            the web at near native speed, with client apps running on the
+            &ldquo;<span class="gradient-purple">WebAssembly</span> has huge implications for the web platform — 
+            it provides a way to run code written in <strong>multiple languages</strong> on
+            the web at <strong>near native speed</strong>, with client apps running on the
             web that previously couldn't have done so.&rdquo;
 					</blockquote>
           <aside class="notes">
-            Figma, google earth, ebay mais en test
+            Native performance with the ease of web distribution
+            Figma, google earth, ebay ma refait aussi pour tester
           </aside>
         </section>
         <section>
-          
-         
           <h4>The languages that compile to wasm</h4>
           <p>Recall: to compile is to translate from a language to another</p>
 					<table>
@@ -240,19 +253,7 @@
            Some others languages try to create their own compilers to wasm but they are not yet stable
           </aside>
         </section>
-        <section>
-          Some code worth 1000 words:
-          <img
-            class="fragment"
-            src="https://cdn.glitch.global/4a8a22ae-a947-460e-9c6b-bc3367c62bd8/wat_wasm.png?v=1696935870486"
-          />
-          <p class="fragment">
-            wat (.wat file) format of wasm code (.wasm file). 
-          </p>
-        <aside class="notes">
-          To enable WebAssembly to be read and edited by humans (debugged), there is a textual representation of the Wasm binary format.
-          </aside>
-        </section>
+       
         <section>
           <h5>Advantages:</h5>
           <ul>
