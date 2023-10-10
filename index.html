@@ -58,7 +58,7 @@
             </li>
             <li class="fragment">
               Why <span class="gradient-red">Rust</span> 🦀 may be a good choice
-              to target into WebAssembly ?
+              to target to WebAssembly ?
             </li>
           </ul>
           <!--li class="fragment">Ok but how ? Show me then 👀</li-->
@@ -110,19 +110,29 @@
         </section>
         <section>
           <h2 class="r-fit-text">
-            Use case: "I want to make an audio editor in my browser"
+            <span class="pink">Use case:</span> "I want to make an audio editor
+            in my browser"
           </h2>
-          <h2 class="r-fit-text">What are the <span class="yellow">JavaScript</span> limitations?</h2>
+          <h2 class="r-fit-text fragment">
+            What are the <span class="yellow">JavaScript</span> limitations?
+          </h2>
 
           <br />
           <ul style="list-style: none">
-            <li class="fragment">>>JS was not designed for realtime computations (GC)</li>
-            <li class="fragment">(but we can cheat using the sound card driver for instance)</li>
-            <br>
+            <li class="fragment">
+              >>JS was not designed for realtime computations (GC)
+            </li>
+            <li class="fragment">
+              (but we can cheat using the sound card driver for instance)
+            </li>
+            <br />
             <li class="fragment">
               >>JS was not designed to manipulate binary data type
             </li>
-            <li class="fragment">(That's why web APIs are made for : audio API, webGL API, etc. but they're coded in more low-level language like C, C++, Rust)</li>
+            <li class="fragment">
+              (That's why web APIs are made for : audio API, webGL API, etc. but
+              they're coded in more low-level language like C, C++, Rust)
+            </li>
             <aside class="notes">
               if i try to create an audio editor with JS (without the webAPI, it
               will have pause/bugs -in a word, more high level languages have
@@ -135,7 +145,9 @@
           </ul>
         </section>
         <section>
-          <h5>What are the <span class="yellow">JavaScript</span> limitations ?</h5>
+          <h5>
+            What are the <span class="yellow">JavaScript</span> limitations ?
+          </h5>
           <br />
           <ul style="list-style: none">
             <li class="fragment">
@@ -150,8 +162,7 @@
             spoiler alert: we can't use those packages !
           </p>
           <aside class="notes">
-            ###########################################################TODO 
-            
+            ###########################################################TODO
           </aside>
         </section>
         <section>
@@ -161,8 +172,9 @@
             >
           </h5>
           <p>Let's talk about JS...</p>
-          historique : aujourd'hui on voudrait que le navigateur sache tout faire (pas la première fois qu'on fait autre chose que je ds nav car flash, java web applet, Google native client
-
+          historique : aujourd'hui on voudrait que le navigateur sache tout
+          faire (pas la première fois qu'on fait autre chose que je ds nav car
+          flash, java web applet, Google native client JIT just in time … ES…ASM
           (here the story of chrome native C++...)
         </section>
         <section>Is there a solution to save us ??? 😱</section>
@@ -179,8 +191,9 @@
           </div>
         </section>
         <section>
-          <h2 class="r-fit-text pink">
-            Use case: "I want to make an audio editor in my browser"
+          <h2 class="r-fit-text">
+            <span class="pink">Use case:</span> "I want to make an audio editor
+            in my browser"
           </h2>
           <a href="https://wavacity.com" class="fragment">
             <img
@@ -360,12 +373,10 @@
         </section>
         <!--#####      Rust    #####-->
         <section>
-          <h5>
-            Use case:
-            <span class="gradient-purple"
-              ><em>I want to code an audio editor</em></span
-            >
-          </h5>
+          <h2 class="r-fit-text">
+            <span class="pink">Use case:</span> "I want to make an audio editor
+            in my browser"
+          </h2>
           <p>what languages can I use?</p>
         </section>
         <section
@@ -380,24 +391,29 @@
           </div>
         </section>
         <section>
+          <h5>
+            Why target<span class="gradient-purple"> WebAssembly</span> with
+            <span class="gradient-red">Rust</span> ?
+          </h5>
           The main reason is:
-          <p>
-            <quote>
-              Rust's memory safety guarantees make memory leaks truly rare
-            </quote>
-            (there's others reasons like community, tooling)
-          </p>
-          Then the wasm app will keep the same guarantees
+          <ul style="list-style: none">
+            <li class="fragment">
+              >>Rust's memory safety guarantees make memory leaks truly rare
+            </li>
+            <br />
+            <li class="fragment">>>others reasons: size of files, community, tooling</li>
+          </ul>
           <aside class="notes">
-            une VM , un modele abstrait d'ordi. Si on fait un code C avec bug
-            dans mémoire, le code wasm est aussi bugé. En rust on ne peut pas
-            faire de bug mémoire...donc cool :)
+            une VM , un modele abstrait d'ordi. 
+            - Si on fait un code C avec bug
+            dans mémoire, le code wasm est aussi bugé. 
+            - En rust on ne peut pas faire de bug mémoire...donc cool :)
+            the wasm app will keep the same guarantees as the languages provide
           </aside>
         </section>
         <section>
-          How to target wasm with Rust: Demo with rust-crypto lib (TODO)
+          How to target wasm with Rust: Demo with rust-crypto lib
         </section>
-        <section>opening: wasm outside the browser? WASI</section>
         <section data-background="white">
           <h2>Questions🐟</h2>
         </section>
