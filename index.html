@@ -60,7 +60,7 @@
           </ul>
           <!--li class="fragment">Ok but how ? Show me then 👀</li-->
 
-          <p class="fragment left-text">wasm = WebAssembly</p>
+          <p class="fragment left-text" style="font-size:large;">wasm = WebAssembly</p>
         </section>
         <section>
           <h2 class="r-fit-text">
@@ -199,7 +199,7 @@
             src="https://cdn.glitch.global/4a8a22ae-a947-460e-9c6b-bc3367c62bd8/wat_wasm.png?v=1696935870486"
           />
           <p class="fragment">
-            wat (.wat file) format of wasm code (.wasm file).
+            wat (.wat) format of wasm code (.wasm)
           </p>
           <aside class="notes">
             To enable WebAssembly to be read and edited by humans (debugged),
@@ -238,20 +238,23 @@
              <li>
             Bring large
             applications to the web, without sacrificing performance or having
-            to re-write the entire application from scratch (Google Earth,
-            Figma for instance).</li>
+            to re-write them from scratch</li>
+            <br>
             <li>
-            Use libraries written in your language. There are tons of amazing
-            legacy libraries written in your language which can now be
+            Use libraries written in your language. They can now be
             seamlessly integrated into your web application.</li>
           </ul>
-            <aside class="notes">everything is now possible in the browser</aside>
+            <aside class="notes">everything is now possible in the browser
+            (Google Earth,
+            Figma for instance).
+            </aside>
         </section>
         <section>
            <h5>Flexibility:</h5>
-          <h4>Languages that compile to Wasm: </h4>
-          <p>Recall: to compile is to translate from a language to another</p>
-          <table>
+          <p>Languages that compile to Wasm: </p>
+          <p class="fragment" style="font-size:large;"><em>Recall: to compile is to translate from a language to another</em></p>
+          <br>
+          <table class="fragment">
             <tr>
               <td></td>
               <td></td>
@@ -284,8 +287,7 @@
           <h5>Performance:</h5>
           <p>
             you can do performance-intensive tasks like computations for 3D
-            games, virtual, and augmented reality or computer vision to C/C++ or
-            Rust-like performant languages.
+            games, virtual, and augmented reality or computer vision 
           </p>
         </section>
       
@@ -299,7 +301,8 @@
           We can see wasm as a way to code app in the Front-End, it's a design
           choice.
         </p>
-          <aside class="notes">This runtime is responsible for executing the Wasm binary instructions within the browser environment</aside>
+          <aside class="notes">This runtime is responsible for executing the Wasm binary instructions within the browser environment
+          Javascript Core Webkit for Safari, Chakra for Edge</aside>
         </section>
         <section>
           Limitations:
