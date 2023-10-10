@@ -183,12 +183,13 @@
         </section>
         <section>
           <p>Web (browser) + Assembly (machine language) = WebAssembly</p>
-          <aside class="notes">
-            An assembly language made to be executed on the virtual machine that
-            is the browser. you don’t know what kinds of machines will your code
-            be running on. wasm: plus proche de comment fonctionne ordi par
-            exemple : gestion de la mémoire, les types de nombres je peux faire
-            tt ce que je fais sur ordi sur le navigateur !
+          <aside class="notes">T
+            
+            An assembly language (binary instructions) made to be executed on the virtual machine that
+            is the browser. 
+           
+            wasm: plus proche de comment fonctionne ordi 
+            exemple : gestion de la mémoire, les types de nombres
           </aside>
         </section>
         <section>
@@ -228,26 +229,27 @@
           </p>
             </div>
           <aside class="notes">
-            Native performance with the ease of web distribution ex: Figma,
-            google earth, ebay ma refait aussi pour tester
+            Native performance with the ease of web distribution
           </aside>
         </section>
           <section>
           <h5>Flexibility:</h5>
           <ul>
-            <li></li>
-            Use libraries written in your language. There are tons of amazing
-            legacy libraries written in your language which can now be
-            seamlessly integrated into your web application.
-            <li>B</li>rings large
+             <li>
+            Bring large
             applications to the web, without sacrificing performance or having
             to re-write the entire application from scratch (Google Earth,
-            Figma, for example).
-          </p>
+            Figma for instance).</li>
+            <li>
+            Use libraries written in your language. There are tons of amazing
+            legacy libraries written in your language which can now be
+            seamlessly integrated into your web application.</li>
+          </ul>
+            <aside class="notes">everything is now possible in the browser</aside>
         </section>
         <section>
            <h5>Flexibility:</h5>
-          <h4>Languages that compile to WASM: </h4>
+          <h4>Languages that compile to Wasm: </h4>
           <p>Recall: to compile is to translate from a language to another</p>
           <table>
             <tr>
@@ -273,7 +275,7 @@
             </tr>
           </table>
           <aside class="notes">
-            Some others languages try to create their own compilers to wasm but
+            Some others languages try to create their own compilers to Wasm but
             they are not yet stable
           </aside>
         </section>
@@ -288,12 +290,16 @@
         </section>
       
         <section>
-        <h5>portability:</h5>
+        <h5>Portability:</h5>
         <p>Run on all browsers.</p>
+          <p>
+            Google Chrome’s V8 engine and Mozilla Firefox’s SpiderMonkey, include a WebAssembly virtual machine or runtime.
+          </p>
         <p>
           We can see wasm as a way to code app in the Front-End, it's a design
           choice.
         </p>
+          <aside class="notes">This runtime is responsible for executing the Wasm binary instructions within the browser environment</aside>
         </section>
         <section>
           Limitations:
@@ -301,6 +307,10 @@
             <li>Wasm can't replace JS</li>
             <li>Web API are only exposed in JS</li>
           </ul>
+          <aside class="notes">
+          Wasm is not intended to replace JavaScript, but to run alongside it. 
+          more, Js acts like Glue code: from one hand is talking to the browser (via webAPI) and from the other to wasm
+          </aside>
         </section>
 
         <!--#####      Rust    #####-->
