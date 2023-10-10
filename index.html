@@ -137,21 +137,20 @@
               - "Ok but with NodeJS I can use packages wich contains some C, C++
               or Rust code" [with fast and realtime computations]
             </li>
-            <li class="fragment">"So why not use them?""</li>
+            
+            <li class="fragment">- "So why not use them?"</li>
           </ul>
           <br />
-          <p class="gradient-red fragment">spoiler alert: we can't !</p>
+          <p class="gradient-red fragment">spoiler alert: we can't use those packages !</p>
           <aside class="notes"></aside>
         </section>
         <section>
           <h5>
-            Use case 🎥:
             <span class="gradient-purple"
               ><em>What are the JavaScript limitations?</em></span
             >
           </h5>
-          <h2>No, we</h2>
-          <p>why do you think?</p>
+          <p>Let's talk about JS...</p>
           (here the story of chrome native C++...)
         </section>
         <section>Is there a solution to save us ??? 😱</section>
@@ -314,11 +313,13 @@
         <section>
           <h5>Limitations:</h5>
           <ul style="list-style: none">
-             <li>Wasm won't replace JS:</li>
+            <li>Don't get it wrong, Wasm won't replace JS:</li>
             <br />
-            <li>>>JS acts like glue code between the browser and Wasm</li>
+            <li class="fragment">
+              >>JS acts like glue code between the browser and Wasm
+            </li>
             <br />
-            <li>>>Web APIs are only exposed in JS</li>
+            <li class="fragment">>>Web APIs are only exposed in JS</li>
           </ul>
           <aside class="notes">
             Wasm is not intended to replace JavaScript, but to run alongside it.
@@ -328,7 +329,15 @@
         </section>
 
         <!--#####      Rust    #####-->
-
+        <section>
+          <h5>
+            Use case:
+            <span class="gradient-purple"
+              ><em>I want to code an audio editor</em></span
+            >
+          </h5>
+          <p>what languages can I use?</p>
+        </section>
         <section
           data-background-color="rgb(70, 70, 255)"
           data-background="https://cdn.glitch.global/4a8a22ae-a947-460e-9c6b-bc3367c62bd8/rust-lang-icon.svg?v=1696780169301"
