@@ -112,15 +112,17 @@
           <h2 class="r-fit-text">
             Use case: "I want to make an audio editor in my browser"
           </h2>
-          <h2 class="r-fit-text">What are the JavaScript limitations?</h2>
+          <h2 class="r-fit-text">What are the <span class="yellow">JavaScript</span> limitations?</h2>
 
           <br />
           <ul style="list-style: none">
-            <li class="fragment">JS was not designed for realtime computations</li>
-            <li>
-              JS was not designed to manipulate binary data type (not like more
-              low-level languages like C,C++, Rust)
+            <li class="fragment">>>JS was not designed for realtime computations (GC)</li>
+            <li class="fragment">(but we can cheat using the sound card driver for instance)</li>
+            <br>
+            <li class="fragment">
+              >>JS was not designed to manipulate binary data type
             </li>
+            <li class="fragment">(That's why web APIs are made for : audio API, webGL API, etc. but they're coded in more low-level language like C, C++, Rust)</li>
             <aside class="notes">
               if i try to create an audio editor with JS (without the webAPI, it
               will have pause/bugs -in a word, more high level languages have
@@ -128,12 +130,12 @@
               JS, the GC pauses the runtime randdomly ' GC stop the world',
               that's why -its not designed for realtime computation garbage
               collector et -> on peut pas faire du calcul en continue comme
-              édition/décodage vidéo-->
+              édition/décodage vidéo
             </aside>
           </ul>
         </section>
         <section>
-          <h5>What are the JavaScript limitations ?</h5>
+          <h5>What are the <span class="yellow">JavaScript</span> limitations ?</h5>
           <br />
           <ul style="list-style: none">
             <li class="fragment">
@@ -149,11 +151,7 @@
           </p>
           <aside class="notes">
             ###########################################################TODO 
-            - (On peut tricher avec le driver de la carte son) 
-            - Qd on manipule Binary
-            data type (image, son, pas du texte) on est obligé d'utiliser l'API
-            du browser (api webGL pour le 3d, api audio ,etc qui sont codées en
-            C,C++, Rust)
+            
           </aside>
         </section>
         <section>
@@ -181,7 +179,7 @@
           </div>
         </section>
         <section>
-          <h2 class="r-fit-text">
+          <h2 class="r-fit-text pink">
             Use case: "I want to make an audio editor in my browser"
           </h2>
           <a href="https://wavacity.com" class="fragment">
