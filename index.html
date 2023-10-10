@@ -60,7 +60,9 @@
           </ul>
           <!--li class="fragment">Ok but how ? Show me then 👀</li-->
 
-          <p class="fragment left-text" style="font-size:large;">wasm = WebAssembly</p>
+          <p class="fragment left-text" style="font-size: large">
+            wasm = WebAssembly
+          </p>
         </section>
         <section>
           <h2 class="r-fit-text">
@@ -183,13 +185,11 @@
         </section>
         <section>
           <p>Web (browser) + Assembly (machine language) = WebAssembly</p>
-          <aside class="notes">T
-            
-            An assembly language (binary instructions) made to be executed on the virtual machine that
-            is the browser. 
-           
-            wasm: plus proche de comment fonctionne ordi 
-            exemple : gestion de la mémoire, les types de nombres
+          <aside class="notes">
+            T An assembly language (binary instructions) made to be executed on
+            the virtual machine that is the browser. wasm: plus proche de
+            comment fonctionne ordi exemple : gestion de la mémoire, les types
+            de nombres
           </aside>
         </section>
         <section>
@@ -198,9 +198,7 @@
             class="fragment"
             src="https://cdn.glitch.global/4a8a22ae-a947-460e-9c6b-bc3367c62bd8/wat_wasm.png?v=1696935870486"
           />
-          <p class="fragment">
-            wat (.wat) format of wasm code (.wasm)
-          </p>
+          <p class="fragment">wat (.wat) format of wasm code (.wasm)</p>
           <aside class="notes">
             To enable WebAssembly to be read and edited by humans (debugged),
             there is a textual representation of the Wasm binary format.
@@ -211,31 +209,29 @@
           <blockquote
             cite="https://developer.mozilla.org/en-US/docs/WebAssembly"
           >
-            &ldquo;WebAssembly has huge
-            implications for the web platform — it provides a way to run code
-            written in <strong class="gradient-purple">multiple languages</strong> on the <strong class="gradient-purple">web</strong> at
-            <strong class="gradient-purple">near native speed</strong>, with client apps running on the
-            web that previously couldn't have done so.&rdquo;
+            &ldquo;WebAssembly has huge implications for the web platform — it
+            provides a way to run code written in
+            <strong class="gradient-purple">multiple languages</strong> on the
+            <strong class="gradient-purple">web</strong> at
+            <strong class="gradient-purple">near native speed</strong>, with
+            client apps running on the web that previously couldn't have done
+            so.&rdquo;
           </blockquote>
-          <div style="display:flex;justify-content: center;">
-          <p class="fragment" style="margin-left:40px;">
-            Flexibility
-          </p>
-            <p class="fragment" style="margin-left:40px;">
-            Portability
-          </p>
-            <p class="fragment" style="margin-left:40px;">
-            Performance
-          </p>
-            </div>
+          <div style="display: flex; justify-content: center">
+            <p class="fragment" style="margin-left: 40px">Flexibility</p>
+            <p class="fragment" style="margin-left: 40px">Portability</p>
+            <p class="fragment" style="margin-left: 40px">Performance</p>
+          </div>
           <aside class="notes">
             Native performance with the ease of web distribution
           </aside>
         </section>
-         <section>
-           <h5>Flexibility:</h5>
-          <p class="fragment"><em>use multiple languages in the browser </em></p>
-          <br>
+        <section>
+          <h5>Flexibility:</h5>
+          <p class="fragment">
+            <em>use multiple languages in the browser </em>
+          </p>
+          <br />
           <table class="fragment">
             <tr>
               <td></td>
@@ -260,61 +256,79 @@
             </tr>
           </table>
           <aside class="notes">
-            - Languages that compile to Wasm
-            - recall: to compile is to translate from a language to another
-            - there's Some others languages try to create their own compilers to Wasm but
-            there compilers are not yet stable
+            - Languages that compile to Wasm - recall: to compile is to
+            translate from a language to another - there's Some others languages
+            try to create their own compilers to Wasm but there compilers are
+            not yet stable
           </aside>
         </section>
-          <section>
+        <section>
           <h5>Flexibility:</h5>
           <ul>
-             <li>
-            Bring large applications or game engines to the web, without sacrificing performance or having
-            to re-write them from scratch</li>
-            <br>
             <li>
-            Integrate libraries written in other languages in your projects.</li>
+              Bring large applications or game engines to the web, without
+              sacrificing performance or having to re-write them from scratch
+            </li>
+            <br />
+            <li>
+              Integrate libraries written in other languages in your projects.
+            </li>
           </ul>
-            <aside class="notes">everything is now possible in the browser
-            (Google Earth,
-            Figma for instance).
-            </aside>
+          <aside class="notes">
+            everything is now possible in the browser (Google Earth, Figma for
+            instance).
+          </aside>
         </section>
-       
 
         <section>
           <h5>Performance:</h5>
-          <p>
-            you can do performance-intensive tasks like computations for 3D
-            games, virtual, and augmented reality or computer vision 
-          </p>
-          
+          <br>
+          <ul>
+            <li>
+              you can do performance-intensive tasks like computations for 3D
+              games, virtual, and augmented reality or computer vision
+            </li>
+             <br>
+            <li>
+              All calculations are done on the client side, these applications
+              no longer need a server. For example, Figma continues to work
+              without a connection
+            </li>
+          </ul>
+        </section>
 
-        </section>
-      
         <section>
-        <h5>Portability:</h5>
-        <p>Run on all browsers.</p>
-          <p>
-            Google Chrome’s V8 engine and Mozilla Firefox’s SpiderMonkey, include a WebAssembly virtual machine or runtime.
-          </p>
-        <p>
-          We can see wasm as a way to code app in the Front-End, it's a design
-          choice.
-        </p>
-          <aside class="notes">This runtime is responsible for executing the Wasm binary instructions within the browser environment
-          Javascript Core Webkit for Safari, Chakra for Edge</aside>
+          <h5>Portability:</h5>
+          <p>Run on all browsers.</p>
+          <ul>
+          <li>
+            >>Google Chrome’s V8 engine and Mozilla Firefox’s SpiderMonkey,
+            include a WebAssembly virtual machine or runtime.
+          </li>
+           <br>
+           <li>
+            >>
+          </li>
+          </ul>
+          <aside class="notes">
+            This runtime is responsible for executing the Wasm binary
+            instructions within the browser environment Javascript Core Webkit
+            for Safari, Chakra for Edge
+          </aside>
         </section>
         <section>
-          Limitations:
+          <h5>
+            Limitations:
+          </h5>
           <ul>
             <li>Wasm can't replace JS</li>
+             <br>
             <li>Web API are only exposed in JS</li>
           </ul>
           <aside class="notes">
-          Wasm is not intended to replace JavaScript, but to run alongside it. 
-          more, Js acts like Glue code: from one hand is talking to the browser (via webAPI) and from the other to wasm
+            Wasm is not intended to replace JavaScript, but to run alongside it.
+            more, Js acts like Glue code: from one hand is talking to the
+            browser (via webAPI) and from the other to wasm
           </aside>
         </section>
 
