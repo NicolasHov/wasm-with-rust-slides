@@ -112,7 +112,7 @@
           <h2 class="r-fit-text">What are the JavaScript limitations?</h2>
 
           <br />
-          <ul>
+          <ul style="list-style: none">
             <li>JS was not designed for realtime computations</li>
             <li>
               JS was not designed to manipulate binary data type (not like more
@@ -130,21 +130,18 @@
           </ul>
         </section>
         <section>
-          <h5>What are the JavaScript limitations? ></h5>
+          <h5>What are the JavaScript limitations ?</h5>
           <br />
-          <ul>
-            <li>
-              "Ok but with NodeJS I can use packages wich contains some C, C++
-              or Rust code" [with fast and continuous computations]
+          <ul style="list-style: none">
+            <li class="fragment">
+              - "Ok but with NodeJS I can use packages wich contains some C, C++
+              or Rust code" [with fast and realtime computations]
             </li>
-            <li>"So why not use them?""</li>
+            <li class="fragment">"So why not use them?""</li>
           </ul>
           <br />
-          <p class="gradient-red">spoiler alert: we can't !</p>
-          <p class="gradient-red">
-            other spoiler alert: the next talk will target this subject
-          </p>
-          <aside class="notes">In the next talk...</aside>
+          <p class="gradient-red fragment">spoiler alert: we can't !</p>
+          <aside class="notes"></aside>
         </section>
         <section>
           <h5>
@@ -264,7 +261,7 @@
         </section>
         <section>
           <h5>Flexibility:</h5>
-          <ul>
+          <ul style="list-style: none">
             <li>
               Bring large applications or game engines to the web, without
               sacrificing performance or having to re-write them from scratch
@@ -282,13 +279,13 @@
 
         <section>
           <h5>Performance:</h5>
-          <br>
-          <ul>
+          <br />
+          <ul style="list-style: none">
             <li>
               you can do performance-intensive tasks like computations for 3D
               games, virtual, and augmented reality or computer vision
             </li>
-             <br>
+            <br />
             <li>
               All calculations are done on the client side, these applications
               no longer need a server. For example, Figma continues to work
@@ -300,15 +297,13 @@
         <section>
           <h5>Portability:</h5>
           <p>Run on all browsers.</p>
-          <ul>
-          <li>
-            >>Google Chrome’s V8 engine and Mozilla Firefox’s SpiderMonkey,
-            include a WebAssembly virtual machine or runtime.
-          </li>
-           <br>
-           <li>
-            >>
-          </li>
+          <ul style="list-style: none">
+            <li>
+              >>Google Chrome’s V8 engine and Mozilla Firefox’s SpiderMonkey,
+              include a WebAssembly virtual machine (or runtime).
+            </li>
+            <br />
+            <li>>>no 2nd point here</li>
           </ul>
           <aside class="notes">
             This runtime is responsible for executing the Wasm binary
@@ -317,13 +312,13 @@
           </aside>
         </section>
         <section>
-          <h5>
-            Limitations:
-          </h5>
-          <ul>
-            <li>Wasm can't replace JS</li>
-             <br>
-            <li>Web API are only exposed in JS</li>
+          <h5>Limitations:</h5>
+          <ul style="list-style: none">
+             <li>Wasm won't replace JS:</li>
+            <br />
+            <li>>>JS acts like glue code between the browser and Wasm</li>
+            <br />
+            <li>>>Web APIs are only exposed in JS</li>
           </ul>
           <aside class="notes">
             Wasm is not intended to replace JavaScript, but to run alongside it.
