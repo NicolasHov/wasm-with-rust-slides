@@ -225,6 +225,18 @@
             there is a textual representation of the Wasm binary format.
           </aside>
         </section>
+         <section>
+          An image worth 1000 words:
+          <img
+            class="fragment"
+            src="https://cdn.glitch.global/4a8a22ae-a947-460e-9c6b-bc3367c62bd8/wat_wasm.png?v=1696935870486"
+          />
+          <p class="fragment">wat (.wat) format of wasm code (.wasm)</p>
+          <aside class="notes">
+            To enable WebAssembly to be read and edited by humans (debugged),
+            there is a textual representation of the Wasm binary format.
+          </aside>
+        </section>
         <section>
           <h4>From MDN's official documentation:</h4>
           <blockquote
@@ -336,7 +348,7 @@
           </aside>
         </section>
         <section>
-          <h5>Wasm won't replace JS:</h5>
+          <h5><span class="gradient-purple">WebAssembly</span> won't replace <span class="yellow">JavaScript</span>:</h5>
           <ul style="list-style: none">
             <li class="fragment">
               >>JS acts like glue code between the browser and Wasm
@@ -351,7 +363,7 @@
           </aside>
         </section>
         <section>
-          <h5>Wasm won't disappear tomorrow:</h5>
+          <h5><span class="gradient-purple">WebAssembly</span> won't disappear tomorrow:</h5>
           <ul style="list-style: none">
             <li class="fragment">
               >>It's a standard from the web consortium since 2017
@@ -395,7 +407,9 @@
             Why target<span class="gradient-purple"> WebAssembly</span> with
             <span class="gradient-red">Rust</span> ?
           </h5>
+          <br>
           The main reason is:
+          
           <ul style="list-style: none">
             <li class="fragment">
               >>Rust's memory safety guarantees make memory leaks truly rare
@@ -407,8 +421,8 @@
             une VM , un modele abstrait d'ordi. 
             - Si on fait un code C avec bug
             dans mémoire, le code wasm est aussi bugé. 
-            - En rust on ne peut pas faire de bug mémoire...donc cool :)
-            the wasm app will keep the same guarantees as the languages provide
+            - rust 'Avoid memory bugs' : pas utiliser deux fois la même mémoire, ou que un truc depasse de la taille défini...donc cool :)
+            - the wasm code will keep the same guarantees as the languages provide
           </aside>
         </section>
         <section>
