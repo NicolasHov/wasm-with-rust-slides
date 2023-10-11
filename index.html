@@ -27,7 +27,7 @@
           <br />
           <div class="wrapper-light">
             Why target<span class="gradient-purple"> WebAssembly</span> with
-            <span class="gradient-red">Rust</span> ?
+            <span class="gradient-red">Rust</span>?
           </div>
           <br />
           <div>
@@ -48,34 +48,34 @@
               No, <span class="yellow">JavaScript</span> in the browser can not
               do everything...
             </li>
-            <li class="fragment">Ok, but can we use NodeJS to solve it ?</li>
+            <li class="fragment">Ok, but can we use NodeJS to solve it?</li>
             <li class="fragment">
-              Or <span class="gradient-purple">WebAssembly</span> 🕸️ ? But what
-              that is ?
+              Or <span class="gradient-purple">WebAssembly</span> 🕸️? But what
+              that is?
             </li>
             <li class="fragment">
-              Advantages👍🏻 and specificities⚠️ of WebAssembly
+              Advantages 👍🏻 and specificities ⚠️ of WebAssembly.
             </li>
             <li class="fragment">
               Why <span class="gradient-red">Rust</span> 🦀 may be a good choice
-              to target to WebAssembly ?
+              to target to WebAssembly?
             </li>
           </ul>
           <!--li class="fragment">Ok but how ? Show me then 👀</li-->
 
           <p class="fragment left-text" style="font-size: large">
-            wasm = WebAssembly
+            WASM == WebAssembly
           </p>
         </section>
         <section>
           <h2 class="r-fit-text">
             What <span class="fragment highlight-red">IS NOT</span> possible to
-            code in the browser using JavaScript ?..........
+            code in the browser using JavaScript?
           </h2>
           <h2 class="fragment">And</h2>
           <h2 class="fragment r-fit-text">
             What <span class="fragment highlight-green">IS</span> possible to
-            code outside the browser using other languages ?
+            code outside the browser using other languages?
           </h2>
           <!--h2 class="r-fit-text">Any idea ?</h2-->
           <aside class="notes">
@@ -112,7 +112,7 @@
         <section>
           <h2 class="r-fit-text">
             <span class="pink">Use case:</span> "I want to make an audio editor
-            in my browser"
+            in my browser!"
           </h2>
           <h2 class="r-fit-text fragment">
             What are the <span class="yellow">JavaScript</span> limitations?
@@ -121,18 +121,18 @@
           <br />
           <ul style="list-style: none">
             <li class="fragment">
-              JS was not designed for realtime computations (GC)
+              JS was not designed for realtime computations (GC),
             </li>
             <li class="fragment">
-              (but we can cheat using the WebAudio API for instance)
+              (but we can cheat using the WebAudio API for instance)!
             </li>
             <br />
             <li class="fragment">
-              JS was not designed to manipulate binary data type
+              JS was not designed to manipulate binary data type,
             </li>
             <li class="fragment">
-              (That's why web APIs are made for : WebAudio API, WebGL API, etc. but
-              they're coded in more low-level language like C, C++, Rust)
+              (that's why web APIs are made for: WebAudio API, WebGL API, etc.
+              but they're implemented in more low-level language, like C, C++ or Rust)!
               <!-- moi la je prlerais plutot de https://web.dev/articles/webgl-typed-arrays#history_of_typed_arrays -->
             </li>
             <aside class="notes">
@@ -145,20 +145,20 @@
         </section>
         <section>
           <h5>
-            What are the <span class="yellow">JavaScript</span> limitations ?
+            What are the <span class="yellow">JavaScript</span> limitations?
           </h5>
           <br />
           <ul style="list-style: none">
             <li class="fragment">
-              "Ok but with NodeJS I can use packages wich contains some C, C++
-              or Rust code" [with fast and realtime computations]
+              "Ok, but with NodeJS I can use packages wich contains some C, C++
+              or Rust code!" (with fast and realtime computations)
             </li>
             <br />
             <li class="fragment">"So why not use them?"</li>
           </ul>
           <br />
           <p class="gradient-red fragment">
-            Spoiler alert: we can't use those NPM packages in the browser!
+            We can't use those NPM packages in the browser!
           </p>
           <aside class="notes"></aside>
         </section>
@@ -195,8 +195,7 @@
         </section>
         <section>
           <h2 class="r-fit-text">
-            <span class="pink">Use case:</span> "I want to make an audio editor
-            in my browser"
+            <span class="pink">Use case:</span> "I want to make an audio editor in my browser!"
           </h2>
           <a href="https://wavacity.com" class="fragment">
             <img
@@ -208,7 +207,7 @@
           >
         </section>
         <section>
-          <p>Web (browser) + Assembly (machine language) = WebAssembly</p>
+          <p>Web (browser) + Assembly (machine language) = <strong>WebAssembly</strong></p>
           <aside class="notes">
             <ul>
               <li>WebAssembly is a machine language (instructions encoded in binary)
@@ -259,18 +258,18 @@
             so.&rdquo;
           </blockquote>
           <div style="display: flex; justify-content: center">
-            <p class="fragment" style="margin-left: 40px">🖇️Flexibility</p>
-            <p class="fragment" style="margin-left: 40px">💼Portability</p>
-            <p class="fragment" style="margin-left: 40px">🚀Performance</p>
+            <p class="fragment" style="margin-left: 40px">🖇️ Flexibility</p>
+            <p class="fragment" style="margin-left: 40px">💼 Portability</p>
+            <p class="fragment" style="margin-left: 40px">🚀 Performance</p>
           </div>
           <aside class="notes">
             Native performance with the ease of web distribution!
           </aside>
         </section>
         <section>
-          <h5>🖇️Flexibility:</h5>
+          <h5>🖇️ Flexibility:</h5>
           <p class="fragment">
-            <em>use multiple languages in the browser </em>
+            <em>Use multiple languages in the browser!</em>
           </p>
           <br />
           <table class="fragment">
@@ -304,11 +303,11 @@
           </aside>
         </section>
         <section>
-          <h5>🖇️Flexibility:</h5>
+          <h5>🖇️ Flexibility:</h5>
           <ul style="list-style: none">
             <li>
               Bring large applications or game engines to the web, without
-              sacrificing performance or having to re-write them from scratch
+              sacrificing performance or having to re-write them from scratch.
             </li>
             <br />
             <li>
@@ -321,12 +320,12 @@
         </section>
 
         <section>
-          <h5>🚀Performance:</h5>
+          <h5>🚀 Performance:</h5>
           <br />
           <ul style="list-style: none">
             <li>
               You can do performance-intensive tasks like computations for 3D
-              games, virtual, and augmented reality or computer vision
+              games, virtual, augmented reality or computer vision.
             </li>
             <br />
             <li>
@@ -338,15 +337,15 @@
         </section>
 
         <section>
-          <h5>💼Portability:</h5>
-          <p>Run on all browsers.</p>
+          <h5>💼 Portability:</h5>
+          <p>Run on all browsers!</p>
           <ul style="list-style: none">
             <li>
               Google Chrome’s V8 engine and Mozilla Firefox’s SpiderMonkey,
               include a WebAssembly virtual machine (or runtime).
             </li>
             <br />
-            <li>kind of « one .wasm file will run identically on all Browser, OS and machines! »</li>
+            <li>Kind of « one .wasm file will run identically on all Browser, OS and machines! »</li>
           </ul>
           <aside class="notes">
             <ul>
@@ -363,10 +362,10 @@
           </h5>
           <ul style="list-style: none">
             <li class="fragment">
-              JS acts like glue code between the browser and Wasm
+              JS acts like glue code between the browser and WASM.
             </li>
             <br />
-            <li class="fragment">Web APIs are only exposed in JS</li>
+            <li class="fragment">Web APIs are only exposed in JS.</li>
           </ul>
           <aside class="notes">
             <ul>
@@ -378,16 +377,15 @@
         </section>
         <section>
           <h5>
-            <span class="gradient-purple">WebAssembly</span> won't disappear
-            tomorrow:
+            <span class="gradient-purple">WebAssembly</span> won't disappear tomorrow:
           </h5>
           <ul style="list-style: none">
             <li class="fragment">
-              It's a standard from the web consortium since 2017
+              It's a standard from the web consortium since 2017!
             </li>
             <br />
             <li class="fragment">
-              It can also be executed outside of the browser environment (WASI)
+              It can also be executed outside of the browser environment (WASI).
             </li>
           </ul>
           <aside class="notes">
@@ -402,13 +400,14 @@
             </ul>
           </aside>
         </section>
+
         <!--#####      Rust    #####-->
+
         <section>
           <h2 class="r-fit-text">
-            <span class="pink">Use case:</span> "I want to make an audio editor
-            in my browser"
+            <span class="pink">Use case:</span> "I want to make an audio editor in my browser!"
           </h2>
-          <p>what languages can I use?</p>
+          <p>What languages can I use?</p>
         </section>
         <section
           data-background-color="rgb(70, 70, 255)"
@@ -416,25 +415,23 @@
           data-background-repeat="repeat"
           data-background-size="200px"
         >
-          <div class="wrapper-dark">
-            Why target<span class="gradient-purple"> WebAssembly</span> with
-            <span class="gradient-red">Rust</span> ?
+          <div class="wrapper-white">
+            Why target<span class="gradient-purple"> WebAssembly</span> with <span class="gradient-red">Rust</span>?
           </div>
         </section>
         <section>
           <h5>
-            Why target<span class="gradient-purple"> WebAssembly</span> with
-            <span class="gradient-red">Rust</span> ?
+            Why target<span class="gradient-purple"> WebAssembly</span> with <span class="gradient-red">Rust</span>?
           </h5>
           <br />
           The main reason is:
           <ul style="list-style: none">
             <li class="fragment">
-              Rust's memory safety guarantees make memory leaks truly rare
+              Rust's memory safety guarantees make memory bugs truly rare.
             </li>
             <br />
             <li class="fragment">
-              Others reasons: size of files, community, tooling
+              Others reasons: size of .wasm files produced, great community and tooling!
             </li>
           </ul>
           <aside class="notes">
@@ -453,17 +450,16 @@
         <section data-background="white">
           <h2>Questions🐟</h2>
         </section>
-        <section data-markdown>
+        <section>
           <p>
-          Thank you for your attention ! To continue the discussion: 
+            Thank you for your attention! To continue the discussion: 
+            <a href="https://hachyderm.io/@Nicolas_ho">https://hachyderm.io/@Nicolas_ho</a>
           </p>
-          [https://hachyderm.io/@Nicolas_ho](https://hachyderm.io/@Nicolas_ho)
-          
-         <span class="gradient-red">NB: I'm not sponsored (yet?) by WASM or Rust</span>
+          <span class="gradient-red">NB: I'm not sponsored (yet?) by WASM or Rust</span>
         </section>
-        <!--section data-background="white">
+        <!-- <section data-background="white">
           <h2>Demo!</h2>
-        </section-->
+        </section> -->
       </div>
     </div>
 
