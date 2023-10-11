@@ -225,7 +225,7 @@
             there is a textual representation of the Wasm binary format.
           </aside>
         </section>
-         <section>
+        <section>
           An image worth 1000 words:
           <img
             class="fragment"
@@ -234,7 +234,8 @@
           <p class="fragment"></p>
           <aside class="notes">
             The Wasm runtime provides an interface that enables communication
-            between the Wasm module and the JavaScript code running in the browser.
+            between the Wasm module and the JavaScript code running in the
+            browser.
           </aside>
         </section>
         <section>
@@ -348,7 +349,10 @@
           </aside>
         </section>
         <section>
-          <h5><span class="gradient-purple">WebAssembly</span> won't replace <span class="yellow">JavaScript</span>:</h5>
+          <h5>
+            <span class="gradient-purple">WebAssembly</span> won't replace
+            <span class="yellow">JavaScript</span>:
+          </h5>
           <ul style="list-style: none">
             <li class="fragment">
               >>JS acts like glue code between the browser and Wasm
@@ -363,7 +367,10 @@
           </aside>
         </section>
         <section>
-          <h5><span class="gradient-purple">WebAssembly</span> won't disappear tomorrow:</h5>
+          <h5>
+            <span class="gradient-purple">WebAssembly</span> won't disappear
+            tomorrow:
+          </h5>
           <ul style="list-style: none">
             <li class="fragment">
               >>It's a standard from the web consortium since 2017
@@ -407,22 +414,24 @@
             Why target<span class="gradient-purple"> WebAssembly</span> with
             <span class="gradient-red">Rust</span> ?
           </h5>
-          <br>
+          <br />
           The main reason is:
-          
+
           <ul style="list-style: none">
             <li class="fragment">
               >>Rust's memory safety guarantees make memory leaks truly rare
             </li>
             <br />
-            <li class="fragment">>>others reasons: size of files, community, tooling</li>
+            <li class="fragment">
+              >>others reasons: size of files, community, tooling
+            </li>
           </ul>
           <aside class="notes">
-            une VM , un modele abstrait d'ordi. 
-            - Si on fait un code C avec bug
-            dans mémoire, le code wasm est aussi bugé. 
-            - rust 'Avoid memory bugs' : pas utiliser deux fois la même mémoire, ou que un truc depasse de la taille défini...donc cool :)
-            - the wasm code will keep the same guarantees as the languages provide
+            une VM , un modele abstrait d'ordi. - Si on fait un code C avec bug
+            dans mémoire, le code wasm est aussi bugé. - rust 'Avoid memory
+            bugs' : pas utiliser deux fois la même mémoire, ou que un truc
+            depasse de la taille défini...donc cool :) - the wasm code will keep
+            the same guarantees as the languages provide
           </aside>
         </section>
         <section>
@@ -456,5 +465,4 @@
         plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
       });
     </script>
-  </body>
-</html>
+ 
