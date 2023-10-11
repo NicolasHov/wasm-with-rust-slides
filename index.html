@@ -136,13 +136,10 @@
               they're coded in more low-level language like C, C++, Rust)
             </li>
             <aside class="notes">
-              Theorically, if try to build an audio editor solely with JS (without using any webAPI, it
-              will have pause/bugs -in a word, more high level languages have
-              what we call a garbage collector to manage memory, -In the case of
-              JS, the GC pauses the runtime randdomly ' GC stop the world',
-              that's why -its not designed for realtime computation garbage
-              collector et -> on peut pas faire du calcul en continue comme
-              édition/décodage vidéo
+              Theorically, if we try to build an audio editor solely with JS (without using any WebAPI),
+              it will have bugs ("stop-the-world" pauses), because high-level languages have
+              what we call a GC (Garbage Collector) to manage memory automatically at runtime, making
+              them impracticable for real-time programming (like manipulating a stream of audio or video)!
             </aside>
           </ul>
         </section>
@@ -161,10 +158,11 @@
           </ul>
           <br />
           <p class="gradient-red fragment">
-            spoiler alert: we can't use those packages !
+            spoiler alert: we can't use those NPM packages in the browser!
           </p>
           <aside class="notes">
             ###########################################################TODO
+            dis moi ce que tu veux raconter ici et je peux t'aider a le reformuler!
           </aside>
         </section>
         <section>
@@ -174,12 +172,17 @@
             >
           </h5>
           <p>Let's talk about JS...</p>
-          historique : aujourd'hui on voudrait que le navigateur sache tout
-          faire (pas la première fois qu'on fait autre chose que je ds nav car
-          flash, java web applet, Google native client JIT just in time … ES…ASM
-          (here the story of chrome native C++...)
+          History: today we would like the browser to be able to do everything!
+          And that's not the first time! We had: Adobe Flash, Java Web Applet, etc.
+          
+          And, let me tell you the story of Google Native Client:
+
+          It was a feature implemented in Chrome that allows user to run apps written in C++
+          directly within the browser ... but it was disabled due to a big security issue found
+          that would allow the attacker to escape the browser sandbox (this means that a page web
+          could acces your computers stuffs)!!!
         </section>
-        <section>Is there a solution to save us ??? 😱</section>
+        <section>Is there a solution to save us??? 😱</section>
 
         <!--#####    WebAssembly    #####-->
 
@@ -209,10 +212,11 @@
         <section>
           <p>Web (browser) + Assembly (machine language) = WebAssembly</p>
           <aside class="notes">
-            T An assembly language (binary instructions) made to be executed on
-            the virtual machine that is the browser. wasm: plus proche de
-            comment fonctionne ordi exemple : gestion de la mémoire, les types
-            de nombres
+            WebAssembly is a machine language (instructions encoded in binary)
+            made to be executed by a VM (Virtual Machine) that the browser should implement!
+            
+            WASM: is definitly a language closer to how a computer works (example: memory management, numbers types)
+            and is made to be used by machines rather than humans (it's not a lnguage in which you will )
           </aside>
         </section>
         <section data-background="white">
