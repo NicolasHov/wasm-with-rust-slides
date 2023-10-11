@@ -172,12 +172,12 @@
             >
           </h5>
           <p>Let's talk about JS...</p>
-          History: today we would like the browser to be able to do everything!
+          - History: today we would like the browser to be able to do everything!
           And that's not the first time! We had: Adobe Flash, Java Web Applet, etc.
           
-          And, let me tell you the story of Google Native Client:
+          - And, let me tell you the story of Google Native Client:
 
-          It was a feature implemented in Chrome that allows user to run apps written in C++
+          - It was a feature implemented in Chrome that allows user to run apps written in C++
           directly within the browser ... but it was disabled due to a big security issue found
           that would allow the attacker to escape the browser sandbox (this means that a page web
           could acces your computers stuffs)!!!
@@ -212,11 +212,12 @@
         <section>
           <p>Web (browser) + Assembly (machine language) = WebAssembly</p>
           <aside class="notes">
-            WebAssembly is a machine language (instructions encoded in binary)
-            made to be executed by a VM (Virtual Machine) that the browser should implement!
-            
-            WASM: is definitly a language closer to how a computer works (example: memory management, numbers types)
-            and is made to be used by machines rather than humans (it's not a language in which you will wrote programs directly)
+            <ul>
+            <li>WebAssembly is a machine language (instructions encoded in binary)
+            made to be executed by a VM (Virtual Machine) that the browser should implement!</li>
+            <li>WASM: is definitly a language closer to how a computer works (example: memory management, numbers types)
+              and is made to be used by machines rather than humans (it's not a language in which you will wrote programs directly)</li>
+            </ul>
           </aside>
         </section>
         <section data-background="white">
@@ -227,10 +228,11 @@
           />
           <p class="fragment">wat (.wat) format of wasm code (.wasm)</p>
           <aside class="notes">
-            To enable WebAssembly to be read and edited by humans (debugged),
-            there is a textual representation of the Wasm binary format (.wat)
-            
-            There is tools (WABT) to encode .wat into .wasm and to decode .wasm into .wat 
+            <ul>
+              <li>To enable WebAssembly to be read and edited by humans (debugged),
+              there is a textual representation of the Wasm binary format (.wat)</li>
+              <li>There is tools (WABT) to encode .wat into .wasm and to decode .wasm into .wat</li>
+            </ul>
           </aside>
         </section>
         <section data-background="white">
@@ -297,9 +299,10 @@
             </tr>
           </table>
           <aside class="notes">
-            There is already a bunch of languages that compile to WASM! (some of them only provide experimental support)
-            
-            Recall: "to compile" means "to translate from a language to another"
+            <ul>
+              <li>There is already a bunch of languages that compile to WASM! (some of them only provide experimental support)</li>
+              <li>Recall: "to compile" means "to translate from a language to another"</li>
+            </ul>
           </aside>
         </section>
         <section>
@@ -348,10 +351,11 @@
             <li>>>kind of « one .wasm file will run identically on all Browser, OS and machines! »</li>
           </ul>
           <aside class="notes">
-            This runtime is now responsible for executing, not only your JS code,
-            but also the WASM binary instructions within the browser environment.
-            
-            There is also JavaScript Core Webkit for Safari, Chakra for Edge, etc.
+            <ul>
+              <li>This runtime is now responsible for executing, not only your JS code,
+              but also the WASM binary instructions within the browser environment.</li>
+              <li>There is also JavaScript Core Webkit for Safari, Chakra for Edge, etc.</li>
+            </ul>
           </aside>
         </section>
         <section>
@@ -367,10 +371,11 @@
             <li class="fragment">>>Web APIs are only exposed in JS</li>
           </ul>
           <aside class="notes">
-            WASM is not intended to replace JavaScript, but to run alongside it!
-            
-            Understand that JS acts like glue code: from one hand it can talk to the browser (via webAPI)
-            and from the other hand to a WASM binary.
+            <ul>
+              <li>WASM is not intended to replace JavaScript, but to run alongside it!</li>
+              <li>Understand that JS acts like glue code: from one hand it can talk to the browser (via webAPI)
+              and from the other hand to a WASM binary.</li>
+            </ul>
           </aside>
         </section>
         <section>
@@ -389,15 +394,15 @@
             </li>
           </ul>
           <aside class="notes">
-            The WebAssembly System Interface (WASI) provides a standardized
-            way for WASM modules to interact with the host system (your OS).
-            
-            WASI allows WASM modules to discuss with the system like file I/O, network
-            access, and interacting with system resources!
-            (a bit like Node.js allows JS to access this kind of ressources)
-            
-            Developers can now code cross-platform application: directly for the browser
-            and for the system outside the browser!
+            <ul>
+              <li>The WebAssembly System Interface (WASI) provides a standardized
+              way for WASM modules to interact with the host system (your OS).</li>
+              <li>WASI allows WASM modules to discuss with the system like file I/O, network
+              access, and interacting with system resources!
+              (a bit like Node.js allows JS to access this kind of ressources)</li>
+              <li>Developers can now code cross-platform application: directly for the browser
+              and for the system outside the browser!</li>
+            </ul>
           </aside>
         </section>
         <!--#####      Rust    #####-->
@@ -437,13 +442,14 @@
             </li>
           </ul>
           <aside class="notes">
-            VM means "virtual machine" you can think about it as an abstract computer model.
+            - VM means "virtual machine" you can think about it as an abstract computer model.
             
-            If we create C code with a bug
-            in memory, the wasm code is also bugged. - rust 'Avoid memory
-            leaks': do not use the same memory twice, or something
-            exceeds the defined size...so cool :) - the wasm code will keep
-            the same guarantees as the languages ​​provide
+            - If we write C code with memory bugs, the WASM bytecode will be also bugged...
+            
+            - Rust prevent a wide range of memory bugs
+            (e.g. do not use the same memory twice, read an object past its defined size, etc. so cool :)
+            
+            - The WASM bytecode will then keep the same guarantees as the Rust language provide!
           </aside>
         </section>
         <section>
