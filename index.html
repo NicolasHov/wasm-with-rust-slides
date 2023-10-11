@@ -79,13 +79,12 @@
           </h2>
           <!--h2 class="r-fit-text">Any idea ?</h2-->
           <aside class="notes">
-            - What is web? it's all that can run in the browser (for instance: HTML, CSS, JS)
-
-            - And what run JS? V8 for Chrome, SpiderMonkey for Firefox, JavaScriptCore for Safari. etc.
-
-            - JS was originally used to animate pages (with jQuery), and to fetch data from HTTP API (with AJAX)
-
-            - What if I want to code, e.g., a video editor directly in my browser?
+            <ul>
+              <li>What is web? it's all that can run in the browser (for instance: HTML, CSS, JS)</li>
+              <li>And what run JS? V8 for Chrome, SpiderMonkey for Firefox, JavaScriptCore for Safari. etc.</li>
+              <li>JS was originally used to animate pages (with jQuery), and to fetch data from HTTP API (with AJAX)</li>
+              <li>What if I want to code, e.g., a video editor directly in my browser?</li>
+            </ul>
           </aside>
         </section>
         <section>
@@ -122,18 +121,19 @@
           <br />
           <ul style="list-style: none">
             <li class="fragment">
-              >>JS was not designed for realtime computations (GC)
+              JS was not designed for realtime computations (GC)
             </li>
             <li class="fragment">
               (but we can cheat using the WebAudio API for instance)
             </li>
             <br />
             <li class="fragment">
-              >>JS was not designed to manipulate binary data type
+              JS was not designed to manipulate binary data type
             </li>
             <li class="fragment">
-              (That's why web APIs are made for : audio API, webGL API, etc. but
+              (That's why web APIs are made for : WebAudio API, WebGL API, etc. but
               they're coded in more low-level language like C, C++, Rust)
+              <!-- moi la je prlerais plutot de https://web.dev/articles/webgl-typed-arrays#history_of_typed_arrays -->
             </li>
             <aside class="notes">
               Theorically, if we try to build an audio editor solely with JS (without using any WebAPI),
@@ -150,20 +150,17 @@
           <br />
           <ul style="list-style: none">
             <li class="fragment">
-              - "Ok but with NodeJS I can use packages wich contains some C, C++
+              "Ok but with NodeJS I can use packages wich contains some C, C++
               or Rust code" [with fast and realtime computations]
             </li>
             <br />
-            <li class="fragment">- "So why not use them?"</li>
+            <li class="fragment">"So why not use them?"</li>
           </ul>
           <br />
           <p class="gradient-red fragment">
-            spoiler alert: we can't use those NPM packages in the browser!
+            Spoiler alert: we can't use those NPM packages in the browser!
           </p>
-          <aside class="notes">
-            ###########################################################TODO
-            dis moi ce que tu veux raconter ici et je peux t'aider a le reformuler!
-          </aside>
+          <aside class="notes"></aside>
         </section>
         <section>
           <h5>
@@ -172,15 +169,16 @@
             >
           </h5>
           <p>Let's talk about JS...</p>
-          - History: today we would like the browser to be able to do everything!
-          And that's not the first time! We had: Adobe Flash, Java Web Applet, etc.
-          
-          - And, let me tell you the story of Google Native Client:
-
-          - It was a feature implemented in Chrome that allows user to run apps written in C++
-          directly within the browser ... but it was disabled due to a big security issue found
-          that would allow the attacker to escape the browser sandbox (this means that a page web
-          could acces your computers stuffs)!!!
+          <ul>
+            <li>History: today we would like the browser to be able to do everything!
+            And that's not the first time! We had: Adobe Flash, Java Web Applet, etc.</li>
+            <li>And, let me tell you the story of Google Native Client:
+            <!-- https://googleprojectzero.blogspot.com/2015/03/exploiting-dram-rowhammer-bug-to-gain.html -->
+            It was a feature implemented in Chrome that allows user to run apps written in C++
+            directly within the browser ... but it was disabled due to a big security issue found
+            that would allow the attacker to escape the browser sandbox (this means that a page web
+            could acces your computers stuffs)!!!</li>
+          </ul>
         </section>
         <section>Is there a solution to save us??? 😱</section>
 
@@ -213,9 +211,9 @@
           <p>Web (browser) + Assembly (machine language) = WebAssembly</p>
           <aside class="notes">
             <ul>
-            <li>WebAssembly is a machine language (instructions encoded in binary)
-            made to be executed by a VM (Virtual Machine) that the browser should implement!</li>
-            <li>WASM: is definitly a language closer to how a computer works (example: memory management, numbers types)
+              <li>WebAssembly is a machine language (instructions encoded in binary)
+              made to be executed by a VM (Virtual Machine) that the browser should implement!</li>
+              <li>WASM: is definitly a language closer to how a computer works (example: memory management, numbers types)
               and is made to be used by machines rather than humans (it's not a language in which you will wrote programs directly)</li>
             </ul>
           </aside>
@@ -344,11 +342,11 @@
           <p>Run on all browsers.</p>
           <ul style="list-style: none">
             <li>
-              >>Google Chrome’s V8 engine and Mozilla Firefox’s SpiderMonkey,
+              Google Chrome’s V8 engine and Mozilla Firefox’s SpiderMonkey,
               include a WebAssembly virtual machine (or runtime).
             </li>
             <br />
-            <li>>>kind of « one .wasm file will run identically on all Browser, OS and machines! »</li>
+            <li>kind of « one .wasm file will run identically on all Browser, OS and machines! »</li>
           </ul>
           <aside class="notes">
             <ul>
@@ -365,10 +363,10 @@
           </h5>
           <ul style="list-style: none">
             <li class="fragment">
-              >>JS acts like glue code between the browser and Wasm
+              JS acts like glue code between the browser and Wasm
             </li>
             <br />
-            <li class="fragment">>>Web APIs are only exposed in JS</li>
+            <li class="fragment">Web APIs are only exposed in JS</li>
           </ul>
           <aside class="notes">
             <ul>
@@ -385,12 +383,11 @@
           </h5>
           <ul style="list-style: none">
             <li class="fragment">
-              >>It's a standard from the web consortium since 2017
+              It's a standard from the web consortium since 2017
             </li>
             <br />
             <li class="fragment">
-              >>It can also be executed outside of the browser environment
-              (WASI)
+              It can also be executed outside of the browser environment (WASI)
             </li>
           </ul>
           <aside class="notes">
@@ -431,25 +428,23 @@
           </h5>
           <br />
           The main reason is:
-
           <ul style="list-style: none">
             <li class="fragment">
-              >>Rust's memory safety guarantees make memory leaks truly rare
+              Rust's memory safety guarantees make memory leaks truly rare
             </li>
             <br />
             <li class="fragment">
-              >>others reasons: size of files, community, tooling
+              Others reasons: size of files, community, tooling
             </li>
           </ul>
           <aside class="notes">
-            - VM means "virtual machine" you can think about it as an abstract computer model.
-            
-            - If we write C code with memory bugs, the WASM bytecode will be also bugged...
-            
-            - Rust prevent a wide range of memory bugs
-            (e.g. do not use the same memory twice, read an object past its defined size, etc. so cool :)
-            
-            - The WASM bytecode will then keep the same guarantees as the Rust language provide!
+            <ul>
+              <li>VM means "virtual machine" you can think about it as an abstract computer model.</li>
+              <li>If we write C code with memory bugs, the WASM bytecode will be also bugged...</li>
+              <li>Rust prevent a wide range of memory bugs
+              (e.g. do not use the same memory twice, read an object past its defined size, etc. so cool :)</li>
+              <li>The WASM bytecode will then keep the same guarantees as the Rust language provide!</li>
+            </ul>
           </aside>
         </section>
         <section>
