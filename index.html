@@ -216,7 +216,7 @@
             made to be executed by a VM (Virtual Machine) that the browser should implement!
             
             WASM: is definitly a language closer to how a computer works (example: memory management, numbers types)
-            and is made to be used by machines rather than humans (it's not a lnguage in which you will )
+            and is made to be used by machines rather than humans (it's not a language in which you will wrote programs directly)
           </aside>
         </section>
         <section data-background="white">
@@ -228,7 +228,9 @@
           <p class="fragment">wat (.wat) format of wasm code (.wasm)</p>
           <aside class="notes">
             To enable WebAssembly to be read and edited by humans (debugged),
-            there is a textual representation of the Wasm binary format.
+            there is a textual representation of the Wasm binary format (.wat)
+            
+            There is tools (WABT) to encode .wat into .wasm and to decode .wasm into .wat 
           </aside>
         </section>
         <section data-background="white">
@@ -239,9 +241,8 @@
           />
           <p class="fragment"></p>
           <aside class="notes">
-            The Wasm runtime provides an interface that enables communication
-            between the Wasm module and the JavaScript code running in the
-            browser.
+            The WASM runtime within your browser provides an interface that enables communication
+            between the .wasm module and your JavaScript code.
           </aside>
         </section>
         <section>
@@ -263,7 +264,7 @@
             <p class="fragment" style="margin-left: 40px">🚀Performance</p>
           </div>
           <aside class="notes">
-            Native performance with the ease of web distribution
+            Native performance with the ease of web distribution!
           </aside>
         </section>
         <section>
@@ -296,10 +297,9 @@
             </tr>
           </table>
           <aside class="notes">
-            - Languages that compile to Wasm - recall: to compile is to
-            translate from a language to another - there's Some others languages
-            try to create their own compilers to Wasm but there compilers are
-            not yet stable
+            There is already a bunch of languages that compile to WASM! (some of them only provide experimental support)
+            
+            Recall: "to compile" means "to translate from a language to another"
           </aside>
         </section>
         <section>
@@ -315,8 +315,7 @@
             </li>
           </ul>
           <aside class="notes">
-            everything is now possible in the browser (Google Earth, Figma for
-            instance).
+            Everything is now possible in the browser (Google Earth, Figma for instance)!
           </aside>
         </section>
 
@@ -349,9 +348,10 @@
             <li>>>kind of « one .wasm file will run identically on all Browser, OS and machines! »</li>
           </ul>
           <aside class="notes">
-            This runtime is responsible for executing the Wasm binary
-            instructions within the browser environment Javascript Core Webkit
-            for Safari, Chakra for Edge
+            This runtime is now responsible for executing, not only your JS code,
+            but also the WASM binary instructions within the browser environment.
+            
+            There is also JavaScript Core Webkit for Safari, Chakra for Edge, etc.
           </aside>
         </section>
         <section>
@@ -367,9 +367,10 @@
             <li class="fragment">>>Web APIs are only exposed in JS</li>
           </ul>
           <aside class="notes">
-            Wasm is not intended to replace JavaScript, but to run alongside it.
-            more, Js acts like Glue code: from one hand is talking to the
-            browser (via webAPI) and from the other to wasm
+            WASM is not intended to replace JavaScript, but to run alongside it!
+            
+            Understand that JS acts like glue code: from one hand it can talk to the browser (via webAPI)
+            and from the other hand to a WASM binary.
           </aside>
         </section>
         <section>
@@ -388,12 +389,15 @@
             </li>
           </ul>
           <aside class="notes">
-            - the WebAssembly System Interface (WASI) provides a standardized
-            way for Wasm modules to interact with the host system - WASI allows
-            Wasm modules can discuss with the system like file I/O, network
-            access, and interacting with system resources. - dev can code
-            cross-platform application : directly for the browser and for the
-            system outside the browser
+            The WebAssembly System Interface (WASI) provides a standardized
+            way for WASM modules to interact with the host system (your OS).
+            
+            WASI allows WASM modules to discuss with the system like file I/O, network
+            access, and interacting with system resources!
+            (a bit like Node.js allows JS to access this kind of ressources)
+            
+            Developers can now code cross-platform application: directly for the browser
+            and for the system outside the browser!
           </aside>
         </section>
         <!--#####      Rust    #####-->
@@ -433,11 +437,13 @@
             </li>
           </ul>
           <aside class="notes">
-            une VM , un modele abstrait d'ordi. - Si on fait un code C avec bug
-            dans mémoire, le code wasm est aussi bugé. - rust 'Avoid memory
-            leaks' : pas utiliser deux fois la même mémoire, ou que un truc
-            depasse de la taille défini...donc cool :) - the wasm code will keep
-            the same guarantees as the languages provide
+            VM means "virtual machine" you can think about it as an abstract computer model.
+            
+            If we create C code with a bug
+            in memory, the wasm code is also bugged. - rust 'Avoid memory
+            leaks': do not use the same memory twice, or something
+            exceeds the defined size...so cool :) - the wasm code will keep
+            the same guarantees as the languages ​​provide
           </aside>
         </section>
         <section>
