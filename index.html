@@ -79,11 +79,13 @@
           </h2>
           <!--h2 class="r-fit-text">Any idea ?</h2-->
           <aside class="notes">
-            - What is web ? it's all that can run in the browser (for instance:
-            HTML, CSS, JS) - ex: V8 motor chromium, speedmonkey for firefox - -
-            they can interpret JS and animate pages, can retrieve data for a web
-            API; etc. - what if I want to code a video editor directly in my
-            browser ?
+            - What is web? it's all that can run in the browser (for instance: HTML, CSS, JS)
+
+            - And what run JS? V8 for Chrome, SpiderMonkey for Firefox, JavaScriptCore for Safari. etc.
+
+            - JS was originally used to animate pages (with jQuery), and to fetch data from HTTP API (with AJAX)
+
+            - What if I want to code, e.g., a video editor directly in my browser?
           </aside>
         </section>
         <section>
@@ -134,7 +136,7 @@
               they're coded in more low-level language like C, C++, Rust)
             </li>
             <aside class="notes">
-              if i try to create an audio editor with JS (without the webAPI, it
+              Theorically, if try to build an audio editor solely with JS (without using any webAPI, it
               will have pause/bugs -in a word, more high level languages have
               what we call a garbage collector to manage memory, -In the case of
               JS, the GC pauses the runtime randdomly ' GC stop the world',
