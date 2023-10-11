@@ -170,17 +170,32 @@
           </h5>
           <p>Let's talk about JS...</p>
           <ul>
-            <li>History: today we would like the browser to be able to do everything!
+            <li class="fragment">History: today we would like the browser to be able to do everything!
             And that's not the first time! We had: Adobe Flash, Java Web Applet, etc.</li>
-            <li>And, let me tell you the story of Google Native Client:
-            <!-- https://googleprojectzero.blogspot.com/2015/03/exploiting-dram-rowhammer-bug-to-gain.html -->
-            It was a feature implemented in Chrome that allows user to run apps written in C++
-            directly within the browser ... but it was disabled due to a big security issue found
-            that would allow the attacker to escape the browser sandbox (this means that a page web
-            could acces your computers stuffs)!!!</li>
+            <br>
+            
           </ul>
         </section>
-        <section>Is there a solution to save us??? 😱</section>
+         <section>
+          <h5>
+            <span class="gradient-purple"
+              ><em>What are the JavaScript limitations?</em></span
+            >
+          </h5>
+          <ul>
+       
+            <li class="fragment">And, let me tell you the story of Google Native Client:</li>
+            <li class="fragment " style="list-style: none">It was a feature implemented in Chrome that allows user to run apps written in C++
+            directly within the browser ...</li> 
+            <li class="fragment" style="list-style: none">but it was disabled due to a big security issue found
+            that would allow the attacker to escape the browser sandbox (this means that a page web
+            could acces your computers stuffs)!!!</li>
+            <li class="fragment" style="list-style: none">https://googleprojectzero.blogspot.com/2015/03/exploiting-dram-rowhammer-bug-to-gain.html</li>
+          </ul>
+        </section>
+        <section> 
+          <li class="fragment">So how to overcome this and have more possibilities in the browser ?</li>
+        </section>
 
         <!--#####    WebAssembly    #####-->
 
@@ -444,9 +459,9 @@
             </ul>
           </aside>
         </section>
-        <section>
+        <!--section>
           How to target WASM with Rust: <strong>Demo!</strong>
-        </section>
+        </section-->
         <section data-background="white">
           <h2>Questions?! 🐟</h2>
         </section>
@@ -454,7 +469,7 @@
           <h2>
             Thank you for your attention!</h2>
           <p>To continue the discussion: </p>
-            [hachyderm.io/@Nicolas_h](https://hachyderm.io/@Nicolas_ho)
+          @mastodon: <a href="https://hachyderm.io/@Nicolas_ho">hachyderm.io/@Nicolas_h</a> 
           </p>
           <span class="gradient-red">NB: I'm not sponsored (yet?) by WASM or Rust ...</span>
         </section>
