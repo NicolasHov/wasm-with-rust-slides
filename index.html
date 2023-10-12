@@ -128,12 +128,52 @@
             </li>
             <br />
             <li class="fragment">
-              JS was not designed to manipulate binary data type,
+              JS was not designed to manipulate binary data type:
             </li>
             <li class="fragment">
-              (that's why web APIs are made for: WebAudio API, WebGL API, etc.
+              it was found in the early implementation stage of WebGL that passing JavaScript arrays (and not binary data) to the graphics driver was causing performance problems.
+              that's why they designed Typed Arrays in the modern JS engines.
+            </li>
+            <li class="fragment">
+             also that's why web APIs are made for: WebAudio API, WebGL API, etc.
               but they're implemented in more low-level language, like C, C++ or Rust)!
-              <!-- moi la je prlerais plutot de https://web.dev/articles/webgl-typed-arrays#history_of_typed_arrays -->
+            </li>
+            <aside class="notes">
+              Theorically, if we try to build an audio editor solely with JS (without using any WebAPI),
+              it will have bugs ("stop-the-world" pauses), because high-level languages have
+              what we call a GC (Garbage Collector) to manage memory automatically at runtime, making
+              them impracticable for real-time programming (like manipulating a stream of audio or video)!
+            </aside>
+          </ul>
+        </section>
+         <section>
+          <h2 class="r-fit-text">
+            <span class="pink">Use case:</span> "I want to make an audio editor
+            in my browser!"
+          </h2>
+          <h2 class="r-fit-text fragment">
+            What are the <span class="yellow">JavaScript</span> limitations?
+          </h2>
+
+          <br />
+          <ul style="list-style: none">
+            <li class="fragment">
+              JS was not designed for realtime computations (GC),
+            </li>
+            <li class="fragment">
+              (but we can cheat using the WebAudio API for instance)!
+            </li>
+            <br />
+            <li class="fragment">
+              JS was not designed to manipulate binary data type:
+            </li>
+            <li class="fragment">
+              it was found in the early implementation stage of WebGL that passing JavaScript arrays (and not binary data) to the graphics driver was causing performance problems.
+              that's why they designed Typed Arrays in the modern JS engines.
+            </li>
+            <li class="fragment">
+             also that's why web APIs are made for: WebAudio API, WebGL API, etc.
+              but they're implemented in more low-level language, like C, C++ or Rust)!
             </li>
             <aside class="notes">
               Theorically, if we try to build an audio editor solely with JS (without using any WebAPI),
@@ -494,6 +534,12 @@
          
         </section>
         <section>
+          <h4>
+            Resources
+          </h4>
+        </section>
+        <!-- doc https://developer.mozilla.org/en-US/docs/WebAssembly/Rust_to_Wasm -->
+        <section>
           <h4>Bibliography</h4>
           <ul>
             <li><a href="https://hacks.mozilla.org/2017/02/a-cartoon-intro-to-webassembly/">Evolution of JS and the performance war</a></li>
@@ -502,15 +548,14 @@
         </section>
         <section>
           <h4>
-            A few Wasm demos:
+            A few other Wasm demos:
           </h4>
           <p>
             To compare JS and Wasm perf:
           </p>
           <ul>
             <li><a href="https://mtharrison.github.io/wasm-raytracer/">raytracer</a></li>
-            <li><a href="https://codepen.io/jtiscione/pen/yxybjX">wave simulator</a></li>
-            <li><a href="https://codepen.io/jtiscione/pen/yxybjX">a video editor</a></li>
+            <li><a href="https://d2jta7o2zej4pf.cloudfront.net/">a video editor</a></li>
             </ul>
           <p>
             Others:
