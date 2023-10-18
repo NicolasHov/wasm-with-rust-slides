@@ -109,12 +109,36 @@
             />
           </div>
         </section>
-        <section>
+         <section>
           <h2 class="r-fit-text">
             <span class="pink">Use case:</span> "I want to make an audio editor
             in my browser!"
           </h2>
           <h2 class="r-fit-text fragment">
+            What are the <span class="yellow">JavaScript</span> limitations?
+          </h2>
+          <br>
+          <br />
+          <ul style="list-style: none">
+            <li class="fragment">
+              JS was not designed for <span class="gradient-red">real-time computations</span>:
+            </li>
+            <br>
+            <li class="fragment">
+              high-level languages have what we call a GC (Garbage Collector) to manage memory automatically at runtime.
+            </li>
+           <br>
+            <li class="fragment">
+              but it pauses the runtime randomly to clean memory. So there's no more real-time computations...
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="r-fit-text">
+            <span class="pink">Use case:</span> "I want to make an audio editor
+            in my browser!"
+          </h2>
+          <h2 class="r-fit-text">
             What are the <span class="yellow">JavaScript</span> limitations?
           </h2>
           <br />
@@ -140,31 +164,7 @@
               them impracticable for real-time programming (like manipulating a stream of audio or video)!
             </aside>
           </ul>
-        </section>
-         <section>
-          <h2 class="r-fit-text">
-            <span class="pink">Use case:</span> "I want to make an audio editor
-            in my browser!"
-          </h2>
-          <h2 class="r-fit-text">
-            What are the <span class="yellow">JavaScript</span> limitations?
-          </h2>
-          <br>
-          <br />
-          <ul style="list-style: none">
-            <li class="fragment">
-              JS was not designed for <span class="gradient-red">real-time computations</span>:
-            </li>
-            <br>
-            <li class="fragment">
-              high-level languages have what we call a GC (Garbage Collector) to manage memory automatically at runtime.
-            </li>
-           <br>
-            <li class="fragment">
-              but it pauses the runtime randomly to clean memory. So there's no more real-time computations...
-            </li>
-          </ul>
-        </section>
+        </section> 
         <section>
           <h5>
             Can we overcome the <span class="yellow">JavaScript</span> limitations?
